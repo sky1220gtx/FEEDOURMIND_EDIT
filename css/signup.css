@@ -1,0 +1,35 @@
+.container2 {
+    padding: 2rem 0rem;
+  }
+   
+  @media (min-width: 576px) {
+    .modal-dialog2 {
+      max-width: 400px;
+    }
+    .modal-dialog2 .modal-content2 {
+      padding: 1rem;
+    }
+  }
+  .modal-header2 .close2 {
+    margin-top: -2.5rem;
+  }
+   
+  .form-title2 {
+    margin: -2rem 0rem 2rem;
+  }
+   
+  .btn-round2 {
+    border-radius: 3rem;
+  }
+   
+  .delimiter2 {
+    padding: 1rem;
+  }
+   
+  .social-buttons2 .btn2 {
+    margin: 0 0.5rem 1rem;
+  }
+   
+  .signup-section2 {
+    padding: 0.3rem 0rem;
+  }
