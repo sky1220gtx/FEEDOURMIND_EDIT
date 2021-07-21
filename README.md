@@ -9,4 +9,4 @@ Website link here : [Here ](https://www.feedourmind.com/)
  - シマルマタ
 
 
-The project starts in 2021.
+This project has started from 2021.
