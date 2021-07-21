@@ -1,5 +1,5 @@
 # FEED OUR MIND
-Website link here : [Here ](https://www.feedourmind.com/)
+Website link : [Here ](https://www.feedourmind.com/)
 
 > TEAM: 
 
