@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 22, 2021 at 01:47 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.7
+-- Generation Time: Jul 22, 2021 at 12:15 AM
+-- Server version: 10.3.28-MariaDB
+-- PHP Version: 7.2.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -84,6 +84,7 @@ CREATE TABLE `tbl_user` (
   `email_status` char(1) DEFAULT '0',
   `slack_user_id` varchar(200) DEFAULT NULL,
   `slack_user_name` varchar(200) DEFAULT NULL,
+  `DELETED` char(1) NOT NULL DEFAULT '0',
   `CREATE` datetime NOT NULL DEFAULT current_timestamp(),
   `UPDATE` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -92,9 +93,9 @@ CREATE TABLE `tbl_user` (
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_name`, `name`, `password`, `email`, `email_status`, `slack_user_id`, `slack_user_name`, `CREATE`, `UPDATE`) VALUES
-(1, 'shima', 'Henry Simarmata', '$2y$10$OLjFkL.wma8DG32IL5BGru2QpRC6DlSmXTtSTe2wlBrUS8HtB0Opm', 'henryust12@gmail.com', '1', NULL, NULL, '2021-07-22 08:36:06', '2021-07-22 08:36:06'),
-(112, 'evren', 'evren balik', '$2y$10$yotpNU3JRFncq.je3J.YteAGTwtA9c4ygCuDraaUamFZY7d94CBVa', 'evren@gmail.com', '1', NULL, NULL, '2021-07-22 08:36:06', '2021-07-22 08:36:06');
+INSERT INTO `tbl_user` (`user_id`, `user_name`, `name`, `password`, `email`, `email_status`, `slack_user_id`, `slack_user_name`, `DELETED`, `CREATE`, `UPDATE`) VALUES
+(1, 'shima', 'Henry Simarmata', '$2y$10$OLjFkL.wma8DG32IL5BGru2QpRC6DlSmXTtSTe2wlBrUS8HtB0Opm', 'henryust12@gmail.com', '1', NULL, NULL, '0', '2021-07-22 08:36:06', '2021-07-22 08:36:06'),
+(112, 'evren', 'evren balik', '$2y$10$yotpNU3JRFncq.je3J.YteAGTwtA9c4ygCuDraaUamFZY7d94CBVa', 'evren@gmail.com', '1', NULL, NULL, '0', '2021-07-22 08:36:06', '2021-07-22 08:36:06');
 
 --
 -- Indexes for dumped tables
