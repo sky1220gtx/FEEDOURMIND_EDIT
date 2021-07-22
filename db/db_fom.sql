@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 22, 2021 at 12:15 AM
+-- Generation Time: Jul 22, 2021 at 05:58 PM
 -- Server version: 10.3.28-MariaDB
 -- PHP Version: 7.2.24
 
@@ -79,7 +79,7 @@ CREATE TABLE `tbl_user` (
   `user_id` int(11) NOT NULL,
   `user_name` varchar(10) NOT NULL,
   `name` varchar(200) NOT NULL,
-  `password` varchar(250) NOT NULL COMMENT 'password hash --> bcrypt',
+  `password` varchar(250) NOT NULL COMMENT 'encrypte method = sha1',
   `email` varchar(200) NOT NULL,
   `email_status` char(1) DEFAULT '0',
   `slack_user_id` varchar(200) DEFAULT NULL,
@@ -94,8 +94,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_name`, `name`, `password`, `email`, `email_status`, `slack_user_id`, `slack_user_name`, `DELETED`, `CREATE`, `UPDATE`) VALUES
-(1, 'shima', 'Henry Simarmata', '$2y$10$OLjFkL.wma8DG32IL5BGru2QpRC6DlSmXTtSTe2wlBrUS8HtB0Opm', 'henryust12@gmail.com', '1', NULL, NULL, '0', '2021-07-22 08:36:06', '2021-07-22 08:36:06'),
-(112, 'evren', 'evren balik', '$2y$10$yotpNU3JRFncq.je3J.YteAGTwtA9c4ygCuDraaUamFZY7d94CBVa', 'evren@gmail.com', '1', NULL, NULL, '0', '2021-07-22 08:36:06', '2021-07-22 08:36:06');
+(1, 'shima', 'Henry Simarmata', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'henryust12@gmail.com', '1', NULL, NULL, '0', '2021-07-22 08:36:06', '2021-07-22 08:36:06'),
+(112, 'evren', 'evren balik', 'b5d16922ab3d4eb8651c512726ad401d05417460', 'evren@gmail.com', '1', NULL, NULL, '0', '2021-07-22 08:36:06', '2021-07-22 08:36:06');
 
 --
 -- Indexes for dumped tables
