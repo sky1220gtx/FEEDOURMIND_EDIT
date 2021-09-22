@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 22, 2021 at 07:23 PM
+-- Generation Time: Sep 22, 2021 at 07:29 PM
 -- Server version: 10.3.28-MariaDB
 -- PHP Version: 7.2.24
 
@@ -43,15 +43,10 @@ CREATE TABLE `tblArticle` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `tblArticle`
---
-
-TRUNCATE TABLE `tblArticle`;
---
 -- Dumping data for table `tblArticle`
 --
 
-INSERT DELAYED IGNORE INTO `tblArticle` (`articleID`, `userID`, `title`, `content`, `VideoLink`, `Clicked`, `DeleteKU`, `Created`, `Updated`) VALUES
+INSERT INTO `tblArticle` (`articleID`, `userID`, `title`, `content`, `VideoLink`, `Clicked`, `DeleteKU`, `Created`, `Updated`) VALUES
 (2, 'henryust12', 'test title', 'hehe boy', 'hehe youtube', 1000, '1', '2021-09-22 19:18:54', '2021-09-22 19:18:54');
 
 -- --------------------------------------------------------
@@ -72,15 +67,10 @@ CREATE TABLE `tblComments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `tblComments`
---
-
-TRUNCATE TABLE `tblComments`;
---
 -- Dumping data for table `tblComments`
 --
 
-INSERT DELAYED IGNORE INTO `tblComments` (`CommentID`, `OwnID`, `CommenterID`, `CommentIN`, `DeleteKU`, `Created`, `Uptadet`) VALUES
+INSERT INTO `tblComments` (`CommentID`, `OwnID`, `CommenterID`, `CommentIN`, `DeleteKU`, `Created`, `Uptadet`) VALUES
 (1, 'henryust12', 'henryust12', 'good article bro', '1', '2021-09-22 19:22:17', '2021-09-22 19:22:17');
 
 -- --------------------------------------------------------
@@ -97,11 +87,6 @@ CREATE TABLE `tblContacts` (
   `Message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Truncate table before insert `tblContacts`
---
-
-TRUNCATE TABLE `tblContacts`;
 -- --------------------------------------------------------
 
 --
@@ -119,15 +104,10 @@ CREATE TABLE `tblFollowers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `tblFollowers`
---
-
-TRUNCATE TABLE `tblFollowers`;
---
 -- Dumping data for table `tblFollowers`
 --
 
-INSERT DELAYED IGNORE INTO `tblFollowers` (`ID`, `OwnID`, `FollowerID`, `DeleteKU`, `Created`, `Updated`) VALUES
+INSERT INTO `tblFollowers` (`ID`, `OwnID`, `FollowerID`, `DeleteKU`, `Created`, `Updated`) VALUES
 (1, 'henryust12', 'henryust12', '1', '2021-09-22 19:20:32', '2021-09-22 19:20:32');
 
 -- --------------------------------------------------------
@@ -148,15 +128,10 @@ CREATE TABLE `tblLike` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `tblLike`
---
-
-TRUNCATE TABLE `tblLike`;
---
 -- Dumping data for table `tblLike`
 --
 
-INSERT DELAYED IGNORE INTO `tblLike` (`LikeID`, `ArticleID`, `LikerID`, `Job`, `DeleteKU`, `Created`, `Updated`) VALUES
+INSERT INTO `tblLike` (`LikeID`, `ArticleID`, `LikerID`, `Job`, `DeleteKU`, `Created`, `Updated`) VALUES
 (1, 2, 'henryust12', 'Student', '1', '2021-09-22 19:19:41', '2021-09-22 19:19:41');
 
 -- --------------------------------------------------------
@@ -188,15 +163,10 @@ CREATE TABLE `tblUsers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `tblUsers`
---
-
-TRUNCATE TABLE `tblUsers`;
---
 -- Dumping data for table `tblUsers`
 --
 
-INSERT DELAYED IGNORE INTO `tblUsers` (`userID`, `password`, `FirstName`, `LastName`, `Gender`, `Birthday`, `Email`, `Status`, `Site`, `Phone`, `Address`, `Country`, `Job`, `Photo`, `About`, `DeleteKU`, `Created`, `Updated`) VALUES
+INSERT INTO `tblUsers` (`userID`, `password`, `FirstName`, `LastName`, `Gender`, `Birthday`, `Email`, `Status`, `Site`, `Phone`, `Address`, `Country`, `Job`, `Photo`, `About`, `DeleteKU`, `Created`, `Updated`) VALUES
 ('henryust12', 'test', 'henry', 'simarmata', 'M', '2002-01-22', 'henryust12@gmail.com', '1', 'google.com', '+8100000000', 'tokyo', 'indonesia', 'tiktok', 'avatar', 'maybe handsome', '1', '2021-09-22 19:16:02', '2021-09-22 19:16:02');
 
 --
