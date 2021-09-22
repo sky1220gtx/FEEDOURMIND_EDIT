@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 22, 2021 at 07:14 PM
+-- Generation Time: Sep 22, 2021 at 07:23 PM
 -- Server version: 10.3.28-MariaDB
 -- PHP Version: 7.2.24
 
@@ -47,6 +47,13 @@ CREATE TABLE `tblArticle` (
 --
 
 TRUNCATE TABLE `tblArticle`;
+--
+-- Dumping data for table `tblArticle`
+--
+
+INSERT DELAYED IGNORE INTO `tblArticle` (`articleID`, `userID`, `title`, `content`, `VideoLink`, `Clicked`, `DeleteKU`, `Created`, `Updated`) VALUES
+(2, 'henryust12', 'test title', 'hehe boy', 'hehe youtube', 1000, '1', '2021-09-22 19:18:54', '2021-09-22 19:18:54');
+
 -- --------------------------------------------------------
 
 --
@@ -69,6 +76,13 @@ CREATE TABLE `tblComments` (
 --
 
 TRUNCATE TABLE `tblComments`;
+--
+-- Dumping data for table `tblComments`
+--
+
+INSERT DELAYED IGNORE INTO `tblComments` (`CommentID`, `OwnID`, `CommenterID`, `CommentIN`, `DeleteKU`, `Created`, `Uptadet`) VALUES
+(1, 'henryust12', 'henryust12', 'good article bro', '1', '2021-09-22 19:22:17', '2021-09-22 19:22:17');
+
 -- --------------------------------------------------------
 
 --
@@ -109,6 +123,13 @@ CREATE TABLE `tblFollowers` (
 --
 
 TRUNCATE TABLE `tblFollowers`;
+--
+-- Dumping data for table `tblFollowers`
+--
+
+INSERT DELAYED IGNORE INTO `tblFollowers` (`ID`, `OwnID`, `FollowerID`, `DeleteKU`, `Created`, `Updated`) VALUES
+(1, 'henryust12', 'henryust12', '1', '2021-09-22 19:20:32', '2021-09-22 19:20:32');
+
 -- --------------------------------------------------------
 
 --
@@ -131,6 +152,13 @@ CREATE TABLE `tblLike` (
 --
 
 TRUNCATE TABLE `tblLike`;
+--
+-- Dumping data for table `tblLike`
+--
+
+INSERT DELAYED IGNORE INTO `tblLike` (`LikeID`, `ArticleID`, `LikerID`, `Job`, `DeleteKU`, `Created`, `Updated`) VALUES
+(1, 2, 'henryust12', 'Student', '1', '2021-09-22 19:19:41', '2021-09-22 19:19:41');
+
 -- --------------------------------------------------------
 
 --
@@ -165,6 +193,13 @@ CREATE TABLE `tblUsers` (
 
 TRUNCATE TABLE `tblUsers`;
 --
+-- Dumping data for table `tblUsers`
+--
+
+INSERT DELAYED IGNORE INTO `tblUsers` (`userID`, `password`, `FirstName`, `LastName`, `Gender`, `Birthday`, `Email`, `Status`, `Site`, `Phone`, `Address`, `Country`, `Job`, `Photo`, `About`, `DeleteKU`, `Created`, `Updated`) VALUES
+('henryust12', 'test', 'henry', 'simarmata', 'M', '2002-01-22', 'henryust12@gmail.com', '1', 'google.com', '+8100000000', 'tokyo', 'indonesia', 'tiktok', 'avatar', 'maybe handsome', '1', '2021-09-22 19:16:02', '2021-09-22 19:16:02');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -179,7 +214,9 @@ ALTER TABLE `tblArticle`
 -- Indexes for table `tblComments`
 --
 ALTER TABLE `tblComments`
-  ADD PRIMARY KEY (`CommentID`);
+  ADD PRIMARY KEY (`CommentID`),
+  ADD KEY `OwnID` (`OwnID`),
+  ADD KEY `CommenterID` (`CommenterID`);
 
 --
 -- Indexes for table `tblContacts`
@@ -217,13 +254,13 @@ ALTER TABLE `tblUsers`
 -- AUTO_INCREMENT for table `tblArticle`
 --
 ALTER TABLE `tblArticle`
-  MODIFY `articleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `articleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tblComments`
 --
 ALTER TABLE `tblComments`
-  MODIFY `CommentID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `CommentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tblContacts`
@@ -235,13 +272,13 @@ ALTER TABLE `tblContacts`
 -- AUTO_INCREMENT for table `tblFollowers`
 --
 ALTER TABLE `tblFollowers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tblLike`
 --
 ALTER TABLE `tblLike`
-  MODIFY `LikeID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `LikeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
@@ -252,6 +289,13 @@ ALTER TABLE `tblLike`
 --
 ALTER TABLE `tblArticle`
   ADD CONSTRAINT `tblArticle_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `tblUsers` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tblComments`
+--
+ALTER TABLE `tblComments`
+  ADD CONSTRAINT `tblComments_ibfk_1` FOREIGN KEY (`OwnID`) REFERENCES `tblUsers` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tblComments_ibfk_2` FOREIGN KEY (`CommenterID`) REFERENCES `tblUsers` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tblFollowers`
