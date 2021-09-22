@@ -3,10 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 22, 2021 at 05:58 PM
+-- Generation Time: Sep 22, 2021 at 06:56 PM
 -- Server version: 10.3.28-MariaDB
 -- PHP Version: 7.2.24
 
+SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -26,152 +27,185 @@ USE `db_fom`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_comment`
+-- Table structure for table `tblArticle`
 --
 
-DROP TABLE IF EXISTS `tbl_comment`;
-CREATE TABLE `tbl_comment` (
-  `comment_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `comment` text NOT NULL,
-  `created_date` date NOT NULL,
-  `post_id` int(11) NOT NULL
+DROP TABLE IF EXISTS `tblArticle`;
+CREATE TABLE IF NOT EXISTS `tblArticle` (
+  `articleID` int(11) NOT NULL AUTO_INCREMENT,
+  `userID` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `VideoLink` varchar(255) NOT NULL,
+  `Clicked` int(11) NOT NULL,
+  `DeleteKU` char(1) NOT NULL,
+  `Created` datetime NOT NULL,
+  `Updated` datetime NOT NULL,
+  PRIMARY KEY (`articleID`),
+  KEY `userID` (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Truncate table before insert `tblArticle`
+--
+
+TRUNCATE TABLE `tblArticle`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_contact`
+-- Table structure for table `tblComments`
 --
 
-DROP TABLE IF EXISTS `tbl_contact`;
-CREATE TABLE `tbl_contact` (
-  `id` int(11) NOT NULL,
-  `Fname` varchar(20) NOT NULL,
-  `Lname` varchar(20) NOT NULL,
-  `Email` varchar(50) NOT NULL,
+DROP TABLE IF EXISTS `tblComments`;
+CREATE TABLE IF NOT EXISTS `tblComments` (
+  `CommentID` int(11) NOT NULL AUTO_INCREMENT,
+  `OwnID` varchar(255) NOT NULL,
+  `CommenterID` varchar(255) NOT NULL,
+  `CommentIN` text NOT NULL,
+  `DeleteKU` char(1) NOT NULL,
+  `Created` datetime NOT NULL,
+  `Uptadet` datetime NOT NULL,
+  PRIMARY KEY (`CommentID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Truncate table before insert `tblComments`
+--
+
+TRUNCATE TABLE `tblComments`;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblContacts`
+--
+
+DROP TABLE IF EXISTS `tblContacts`;
+CREATE TABLE IF NOT EXISTS `tblContacts` (
+  `ContactID` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
   `Message` text NOT NULL,
-  `INSERT_NB` datetime NOT NULL
+  PRIMARY KEY (`ContactID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Truncate table before insert `tblContacts`
+--
+
+TRUNCATE TABLE `tblContacts`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_post`
+-- Table structure for table `tblFollowers`
 --
 
-DROP TABLE IF EXISTS `tbl_post`;
-CREATE TABLE `tbl_post` (
-  `post_id` int(11) NOT NULL,
-  `created_date` date NOT NULL,
-  `post` text NOT NULL,
-  `user_id` int(11) NOT NULL
+DROP TABLE IF EXISTS `tblFollowers`;
+CREATE TABLE IF NOT EXISTS `tblFollowers` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `OwnID` varchar(255) NOT NULL,
+  `FollowerID` varchar(255) NOT NULL,
+  `DeleteKU` char(1) NOT NULL,
+  `Created` datetime NOT NULL,
+  `Updated` datetime NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `tblFollowers_ibfk_1` (`OwnID`),
+  KEY `FollowerID` (`FollowerID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Truncate table before insert `tblFollowers`
+--
+
+TRUNCATE TABLE `tblFollowers`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_user`
+-- Table structure for table `tblLike`
 --
 
-DROP TABLE IF EXISTS `tbl_user`;
-CREATE TABLE `tbl_user` (
-  `user_id` int(11) NOT NULL,
-  `user_name` varchar(10) NOT NULL,
-  `name` varchar(200) NOT NULL,
-  `password` varchar(250) NOT NULL COMMENT 'encrypte method = sha1',
-  `email` varchar(200) NOT NULL,
-  `email_status` char(1) DEFAULT '0',
-  `slack_user_id` varchar(200) DEFAULT NULL,
-  `slack_user_name` varchar(200) DEFAULT NULL,
-  `DELETED` char(1) NOT NULL DEFAULT '0',
-  `CREATE` datetime NOT NULL DEFAULT current_timestamp(),
-  `UPDATE` datetime NOT NULL DEFAULT current_timestamp()
+DROP TABLE IF EXISTS `tblLike`;
+CREATE TABLE IF NOT EXISTS `tblLike` (
+  `LikeID` int(11) NOT NULL AUTO_INCREMENT,
+  `ArticleID` int(11) NOT NULL,
+  `LikerID` varchar(255) NOT NULL,
+  `Job` varchar(30) NOT NULL,
+  `DeleteKU` char(1) NOT NULL,
+  `Created` datetime NOT NULL,
+  `Updated` datetime NOT NULL,
+  PRIMARY KEY (`LikeID`),
+  KEY `ArticleID` (`ArticleID`),
+  KEY `LikerID` (`LikerID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_user`
+-- Truncate table before insert `tblLike`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_name`, `name`, `password`, `email`, `email_status`, `slack_user_id`, `slack_user_name`, `DELETED`, `CREATE`, `UPDATE`) VALUES
-(1, 'shima', 'Henry Simarmata', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'henryust12@gmail.com', '1', NULL, NULL, '0', '2021-07-22 08:36:06', '2021-07-22 08:36:06'),
-(112, 'evren', 'evren balik', 'b5d16922ab3d4eb8651c512726ad401d05417460', 'evren@gmail.com', '1', NULL, NULL, '0', '2021-07-22 08:36:06', '2021-07-22 08:36:06');
+TRUNCATE TABLE `tblLike`;
+-- --------------------------------------------------------
 
 --
--- Indexes for dumped tables
+-- Table structure for table `tblUsers`
 --
 
---
--- Indexes for table `tbl_comment`
---
-ALTER TABLE `tbl_comment`
-  ADD PRIMARY KEY (`comment_id`),
-  ADD KEY `post_id` (`post_id`),
-  ADD KEY `tbl_comment_ibfk_1` (`user_id`);
+DROP TABLE IF EXISTS `tblUsers`;
+CREATE TABLE IF NOT EXISTS `tblUsers` (
+  `userID` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `FirstName` varchar(50) NOT NULL,
+  `LastName` varchar(50) NOT NULL,
+  `Gender` char(1) NOT NULL,
+  `Birthday` date NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Status` char(1) NOT NULL,
+  `Site` varchar(50) DEFAULT NULL,
+  `Phone` varchar(20) DEFAULT NULL,
+  `Address` varchar(255) DEFAULT NULL,
+  `Country` varchar(100) DEFAULT NULL,
+  `Job` varchar(30) DEFAULT NULL,
+  `Photo` varchar(255) DEFAULT NULL,
+  `About` text DEFAULT NULL,
+  `DeleteKU` char(1) NOT NULL,
+  `Created` datetime NOT NULL,
+  `Updated` datetime NOT NULL,
+  PRIMARY KEY (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Indexes for table `tbl_contact`
---
-ALTER TABLE `tbl_contact`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_post`
---
-ALTER TABLE `tbl_post`
-  ADD PRIMARY KEY (`post_id`),
-  ADD KEY `user_id` (`user_id`);
-
---
--- Indexes for table `tbl_user`
---
-ALTER TABLE `tbl_user`
-  ADD PRIMARY KEY (`user_id`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- Truncate table before insert `tblUsers`
 --
 
---
--- AUTO_INCREMENT for table `tbl_comment`
---
-ALTER TABLE `tbl_comment`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tbl_contact`
---
-ALTER TABLE `tbl_contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `tbl_post`
---
-ALTER TABLE `tbl_post`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tbl_user`
---
-ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10000;
-
+TRUNCATE TABLE `tblUsers`;
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `tbl_comment`
+-- Constraints for table `tblArticle`
 --
-ALTER TABLE `tbl_comment`
-  ADD CONSTRAINT `tbl_comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`user_id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `tbl_comment_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `tbl_post` (`post_id`) ON DELETE CASCADE;
+ALTER TABLE `tblArticle`
+  ADD CONSTRAINT `tblArticle_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `tblUsers` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tbl_post`
+-- Constraints for table `tblFollowers`
 --
-ALTER TABLE `tbl_post`
-  ADD CONSTRAINT `tbl_post_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`user_id`) ON DELETE CASCADE;
+ALTER TABLE `tblFollowers`
+  ADD CONSTRAINT `tblFollowers_ibfk_1` FOREIGN KEY (`OwnID`) REFERENCES `tblUsers` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tblFollowers_ibfk_2` FOREIGN KEY (`FollowerID`) REFERENCES `tblUsers` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tblLike`
+--
+ALTER TABLE `tblLike`
+  ADD CONSTRAINT `tblLike_ibfk_1` FOREIGN KEY (`ArticleID`) REFERENCES `tblArticle` (`articleID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tblLike_ibfk_2` FOREIGN KEY (`LikerID`) REFERENCES `tblUsers` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tblUsers`
+--
+ALTER TABLE `tblUsers`
+  ADD CONSTRAINT `tblUsers_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `tblArticle` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
+SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
