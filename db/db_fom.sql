@@ -3,11 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 22, 2021 at 06:56 PM
+-- Generation Time: Sep 22, 2021 at 07:14 PM
 -- Server version: 10.3.28-MariaDB
 -- PHP Version: 7.2.24
 
-SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -31,8 +30,8 @@ USE `db_fom`;
 --
 
 DROP TABLE IF EXISTS `tblArticle`;
-CREATE TABLE IF NOT EXISTS `tblArticle` (
-  `articleID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tblArticle` (
+  `articleID` int(11) NOT NULL,
   `userID` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
@@ -40,9 +39,7 @@ CREATE TABLE IF NOT EXISTS `tblArticle` (
   `Clicked` int(11) NOT NULL,
   `DeleteKU` char(1) NOT NULL,
   `Created` datetime NOT NULL,
-  `Updated` datetime NOT NULL,
-  PRIMARY KEY (`articleID`),
-  KEY `userID` (`userID`)
+  `Updated` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -57,15 +54,14 @@ TRUNCATE TABLE `tblArticle`;
 --
 
 DROP TABLE IF EXISTS `tblComments`;
-CREATE TABLE IF NOT EXISTS `tblComments` (
-  `CommentID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tblComments` (
+  `CommentID` int(11) NOT NULL,
   `OwnID` varchar(255) NOT NULL,
   `CommenterID` varchar(255) NOT NULL,
   `CommentIN` text NOT NULL,
   `DeleteKU` char(1) NOT NULL,
   `Created` datetime NOT NULL,
-  `Uptadet` datetime NOT NULL,
-  PRIMARY KEY (`CommentID`)
+  `Uptadet` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -80,12 +76,11 @@ TRUNCATE TABLE `tblComments`;
 --
 
 DROP TABLE IF EXISTS `tblContacts`;
-CREATE TABLE IF NOT EXISTS `tblContacts` (
-  `ContactID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tblContacts` (
+  `ContactID` int(11) NOT NULL,
   `Name` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
-  `Message` text NOT NULL,
-  PRIMARY KEY (`ContactID`)
+  `Message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -100,16 +95,13 @@ TRUNCATE TABLE `tblContacts`;
 --
 
 DROP TABLE IF EXISTS `tblFollowers`;
-CREATE TABLE IF NOT EXISTS `tblFollowers` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tblFollowers` (
+  `ID` int(11) NOT NULL,
   `OwnID` varchar(255) NOT NULL,
   `FollowerID` varchar(255) NOT NULL,
   `DeleteKU` char(1) NOT NULL,
   `Created` datetime NOT NULL,
-  `Updated` datetime NOT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `tblFollowers_ibfk_1` (`OwnID`),
-  KEY `FollowerID` (`FollowerID`)
+  `Updated` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -124,17 +116,14 @@ TRUNCATE TABLE `tblFollowers`;
 --
 
 DROP TABLE IF EXISTS `tblLike`;
-CREATE TABLE IF NOT EXISTS `tblLike` (
-  `LikeID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tblLike` (
+  `LikeID` int(11) NOT NULL,
   `ArticleID` int(11) NOT NULL,
   `LikerID` varchar(255) NOT NULL,
   `Job` varchar(30) NOT NULL,
   `DeleteKU` char(1) NOT NULL,
   `Created` datetime NOT NULL,
-  `Updated` datetime NOT NULL,
-  PRIMARY KEY (`LikeID`),
-  KEY `ArticleID` (`ArticleID`),
-  KEY `LikerID` (`LikerID`)
+  `Updated` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -149,7 +138,7 @@ TRUNCATE TABLE `tblLike`;
 --
 
 DROP TABLE IF EXISTS `tblUsers`;
-CREATE TABLE IF NOT EXISTS `tblUsers` (
+CREATE TABLE `tblUsers` (
   `userID` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `FirstName` varchar(50) NOT NULL,
@@ -167,8 +156,7 @@ CREATE TABLE IF NOT EXISTS `tblUsers` (
   `About` text DEFAULT NULL,
   `DeleteKU` char(1) NOT NULL,
   `Created` datetime NOT NULL,
-  `Updated` datetime NOT NULL,
-  PRIMARY KEY (`userID`)
+  `Updated` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -176,6 +164,85 @@ CREATE TABLE IF NOT EXISTS `tblUsers` (
 --
 
 TRUNCATE TABLE `tblUsers`;
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tblArticle`
+--
+ALTER TABLE `tblArticle`
+  ADD PRIMARY KEY (`articleID`),
+  ADD KEY `userID` (`userID`);
+
+--
+-- Indexes for table `tblComments`
+--
+ALTER TABLE `tblComments`
+  ADD PRIMARY KEY (`CommentID`);
+
+--
+-- Indexes for table `tblContacts`
+--
+ALTER TABLE `tblContacts`
+  ADD PRIMARY KEY (`ContactID`);
+
+--
+-- Indexes for table `tblFollowers`
+--
+ALTER TABLE `tblFollowers`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `tblFollowers_ibfk_1` (`OwnID`),
+  ADD KEY `FollowerID` (`FollowerID`);
+
+--
+-- Indexes for table `tblLike`
+--
+ALTER TABLE `tblLike`
+  ADD PRIMARY KEY (`LikeID`),
+  ADD KEY `ArticleID` (`ArticleID`),
+  ADD KEY `LikerID` (`LikerID`);
+
+--
+-- Indexes for table `tblUsers`
+--
+ALTER TABLE `tblUsers`
+  ADD PRIMARY KEY (`userID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tblArticle`
+--
+ALTER TABLE `tblArticle`
+  MODIFY `articleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tblComments`
+--
+ALTER TABLE `tblComments`
+  MODIFY `CommentID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tblContacts`
+--
+ALTER TABLE `tblContacts`
+  MODIFY `ContactID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tblFollowers`
+--
+ALTER TABLE `tblFollowers`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tblLike`
+--
+ALTER TABLE `tblLike`
+  MODIFY `LikeID` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- Constraints for dumped tables
 --
@@ -199,13 +266,6 @@ ALTER TABLE `tblFollowers`
 ALTER TABLE `tblLike`
   ADD CONSTRAINT `tblLike_ibfk_1` FOREIGN KEY (`ArticleID`) REFERENCES `tblArticle` (`articleID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tblLike_ibfk_2` FOREIGN KEY (`LikerID`) REFERENCES `tblUsers` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `tblUsers`
---
-ALTER TABLE `tblUsers`
-  ADD CONSTRAINT `tblUsers_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `tblArticle` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
-SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
