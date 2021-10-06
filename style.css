@@ -53,3 +53,135 @@ html {
 .item span {
     font-style: normal;
 }
+
+/*Login button*/
+#main {
+    width: 450px;
+    height: 650px;
+    padding: 30px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-content: center;
+    border-radius: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  #other_sign_up_options {
+    text-align: center;
+  }
+  
+  #other_sign_up_options_icon {
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+  }
+  
+  #login_button {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    /* background-color: #59c2dc; */
+    background-image: linear-gradient(to right, #59c2dc, #e638f7);
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+    height: 50px;
+    font-size: 20px;
+    letter-spacing: 0px;
+    font-weight: 500;
+  }
+  
+  #login_button:hover {
+  
+      border-radius: 10px;
+      cursor: pointer;
+  }
+  
+  main {
+    padding: 100px;
+    background-image: linear-gradient(to top right, #59c2dc, #59c2dc, #e638f7);
+  }
+  
+  #login_text {
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  #textfield_label {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
+    color: rgba(0, 0, 0, 0.726);
+  }
+  #other_sign_up_options_text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  #sign_up_text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px;
+  }
+  #sign_up_text:hover {
+  
+    font-weight: bold;
+    color: #e638f790;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0px;
+  }
+  
+  #spacer {
+    height: 50px;
+  }
+  
+  #textfield {
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    width: 90%;
+  }
+  
+  #divider {
+    width: 100%;
+    height: 2px;
+    margin-top: 15px;
+    background-color: black;
+  }
+  
+  #forgot_password {
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.39);
+    margin: 20px;
+  }
+  
+  #textfield::placeholder {
+    color: rgba(0, 0, 0);
+    font-size: 14px;
+      letter-spacing: 0.8px;
+  
+  }
+  input:focus {
+    outline: none;
+  }
+  #textfield_icon {
+  
+  
+    float: left;
+  }
+  
