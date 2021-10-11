@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html>
 <title>FeedOurMind</title>
@@ -10,6 +15,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
+<?php
+if($_SESSION["userID"]) {
+?>
+    
+
+
+
 
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
@@ -20,7 +32,15 @@
                 <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
                 <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
                 <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i>POST</a>
-                <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-send"></i>Login</a>
+                <?php echo "<a href='../fom/auth/logout.php' class='w3-bar-item w3-button'><i class='fa fa-send'></i>Logout</a>"; ?>
+                <?php
+}
+else 
+{
+    echo "<a href='../fom/auth/login.php' class='w3-bar-item w3-button'><i class='fa fa-send'></i>Login</a>";
+    
+}
+?>
                 <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
                 <!-- <a>
                     <form action="/action_page.php"></form>
