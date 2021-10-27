@@ -29,4 +29,4 @@
 <img src="../../db/img/6.png" alt="" srcset="">
 <br>
 
-<p>DONE! </p>W
+<p>DONE! </p>
