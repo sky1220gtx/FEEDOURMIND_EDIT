@@ -1,3 +1,4 @@
+[戻る](../../README.md)
 # Generate Token
 
 1. Click icon logo
