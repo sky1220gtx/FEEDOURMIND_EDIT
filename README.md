@@ -17,3 +17,4 @@ This project has started from 2021.
 
 ## Turorial
 1. [Import Database](docs/import_database/import_database.md)
+2. [Generate Token](docs/generate_token/generate_token.md)
