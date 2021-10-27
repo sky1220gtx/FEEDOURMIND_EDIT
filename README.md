@@ -17,4 +17,4 @@
 
 ## 学習用
 1. [データベースをインポートする](docs/import_database/import_database.md)
-2. [トークンを作成方法](docs/generate_token/generate_token.md)
+2. [トークンの作成方法](docs/generate_token/generate_token.md)
