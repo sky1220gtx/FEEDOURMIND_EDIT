@@ -1,5 +1,5 @@
 # FEED OUR MIND
-Website link : [Here ](https://www.feedourmind.com/)
+<!-- Website link : [Here ](https://www.feedourmind.com/) -->
 
 > TEAM: 
  ### 2年生
@@ -8,11 +8,11 @@ Website link : [Here ](https://www.feedourmind.com/)
  - ウーサンリン
  - シマルマタ
  ### 1年生
- -
- -
- -
- -
- -
+ - アンミンパイ
+ - リ　カトウ
+ - コウ　トウショウ
+ - シュ　コウセイ
+ 
 This project has started from 2021.
 
 ## Turorial
