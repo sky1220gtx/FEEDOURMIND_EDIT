@@ -1,7 +1,7 @@
 # FEED OUR MIND
 <!-- Website link : [Here ](https://www.feedourmind.com/) -->
 
-> TEAM: 
+> チーム: 
  ### 2年生
  - 戸田正毅
  - エブレン・バリク
@@ -12,9 +12,9 @@
  - リ　カトウ
  - コウ　トウショウ
  - シュ　コウセイ
- 
-This project has started from 2021.
 
-## Turorial
-1. [Import Database](docs/import_database/import_database.md)
-2. [Generate Token](docs/generate_token/generate_token.md)
+プロジェクトは２０２１年から始まりました.
+
+## 学習用
+1. [データベースをインポートする](docs/import_database/import_database.md)
+2. [トークンを生成する](docs/generate_token/generate_token.md)
