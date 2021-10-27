@@ -16,4 +16,4 @@ Website link : [Here ](https://www.feedourmind.com/)
 This project has started from 2021.
 
 ## Turorial
-1. [Import Database](docs/import_database.md)
+1. [Import Database](docs/import_database/import_database.md)
