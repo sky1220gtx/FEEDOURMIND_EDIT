@@ -3,10 +3,10 @@
 
 ### RECENTLY NEWS
 ***
-  >**`New Design Update`**   
-  >tblCommentsに「articleID」を追加しました
-  >tblCommentsをtblArticlesに接続しました。
-  >![asd](https://raw.githubusercontent.com/eburen/FEEDOURMIND_EDIT/common/db/design.png)   
+  > **`New Design Update`**   
+  > tblCommentsに「articleID」を追加しました   
+  > tblCommentsをtblArticlesに接続しました。   
+  > ![asd](https://raw.githubusercontent.com/eburen/FEEDOURMIND_EDIT/common/db/design.png)   
 
 ***
 <br>   
