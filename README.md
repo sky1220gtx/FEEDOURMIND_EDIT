@@ -1,17 +1,17 @@
-# FEED OUR MIND
+# FEED OUR MIND [wiki](https://github.com/eburen/FEEDOURMIND_EDIT/wiki)
 <!-- Website link : [Here ](https://www.feedourmind.com/) -->
 
-<p>
-    <h3 style="color: crimson;">New Design Update</h3>
-    <img src="db/design.png" alt="">
-    <br>
-    tblCommentsに「articleID」を追加しました
-    <br>
-    tblCommentsをtblArticlesに接続しました。
-</p>
-<br><br>
+### RECENTLY NEWS
+***
+  >**`New Design Update`**   
+  >tblCommentsに「articleID」を追加しました
+  >tblCommentsをtblArticlesに接続しました。
+  >![asd](https://raw.githubusercontent.com/eburen/FEEDOURMIND_EDIT/common/db/design.png)   
 
-> チーム: 
+***
+<br>   
+
+チーム: 
  ### 2年生
  - 戸田正毅
  - エブレン
