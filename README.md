@@ -1,7 +1,7 @@
 # FEED OUR MIND [wiki](https://github.com/eburen/FEEDOURMIND_EDIT/wiki)
 <!-- Website link : [Here ](https://www.feedourmind.com/) --> 
 
-Read First : [Tam Work Rule](https://github.com/eburen/FEEDOURMIND_EDIT/wiki/TEAM-WORK-RULE/)
+Read First : [FeedOurMind Rules](https://github.com/eburen/FEEDOURMIND_EDIT/wiki/TEAM-WORK-RULE/)
 
 ### RECENTLY NEWS
 ***
