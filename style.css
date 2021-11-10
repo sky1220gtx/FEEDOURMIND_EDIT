@@ -14,13 +14,48 @@ html {
     line-height: 1.8;
 }
 
+/* Navi */
+#myNavbar a{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  margin-left: -100px;
+}
+
+.newnavi a{
+  margin-right: 90px;
+  color: black;
+  margin-top: 5px;
+}
+
+
+/* #myNavbar img{
+  width: 60px;
+  margin-left: -270px;
+} */
+
+.w3-top img {
+  width: 7%;
+  margin-left: -90px;
+}
+
+.w3-top a{
+  font-family: 'Roboto Slab', serif;
+}
+/*.newnavi{
+  background-color: aqua;
+}*/
+
 
 /* Full height image header */
 
+.header-font span{
+  color: rgb(4, 58, 58);
+}
 .bgimg-1 {
     background-position: center;
     background-size: cover;
-    background-image: url("pic1.jpg");
+    background-image: url("computer-laptop-work-place-camera-705164.jpeg");
     min-height: 100%;
 }
 
@@ -53,7 +88,119 @@ html {
 .item span {
     font-style: normal;
 }
+/* Quotes*/
+.quotes h2{
+  margin-top: 40px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.quotes p{
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
 
+.quote-box{
+  width: 1000px;
+  height: 80px;
+  margin: auto;
+  background-image: linear-gradient(to bottom, #141414, #414040);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+.quote-box::after,
+.quote-box::before{
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  /*background-image: linear-gradient(35deg, #ff1400, #ff3200, #00ff4e, #00ffce, #263c9a,
+  #7500ff, #0010d3, #ff0076, #ff1400, #ff3200, #00ff4e, #00ffce, #263c9a,#7500ff, #0010d3, #ff0076 );*/
+  background-image: linear-gradient(35deg, #db3c2e, #381006, #41995c, #76c9b8, #4f60ac,
+#6a5186, #474c85, #c24b82, #db3c2e, #381006, #41995c, #76c9b8, #4f60ac,#6a5186, #474c85, #c24b82 );
+  background-size: 400%;
+  animation: shadow 45s linear infinite;
+  z-index: -1;
+}
+@keyframes shadow{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 400%;
+  }
+  100%{
+    background-position: 0 0;
+  }
+
+}
+.quote-box::before{
+  filter: blur(10px);
+}
+/* we know design*/
+.w3-row-padding h3{
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+.w3-row-padding p{
+  font-size: 17px;
+  margin-left: 30px;
+}
+
+/*PAGE CONTENT*/
+
+
+
+
+#work h3{
+  font-family: raleway;
+  font-size: 22px;
+  margin-left: -5px;
+  text-align: center;
+}
+#work p{
+  margin-left: -5px;
+}
+/*Second Photo Grid*/
+#sec-work h3{
+  font-family: raleway;
+  font-size: 22px;
+  margin-left: -5px;
+  text-align: center;
+}
+
+#sec-work p{
+  margin-left: -5px;
+}
+
+/*skill Section*/
+
+/*Team Section*/
+#team h3{
+  font-family: raleway;
+}
+
+/*Contact Section*/
+#contact{
+  background-color: white;
+  margin-top: 70px;
+}
+
+/*footer*/
+.footer-bg{
+  background-color: rgb(169, 175, 231);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
 /*Login button*/
 #main {
     width: 450px;

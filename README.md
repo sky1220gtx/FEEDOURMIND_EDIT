@@ -1,28 +1,45 @@
-# FEED OUR MIND [wiki](https://github.com/eburen/FEEDOURMIND_EDIT/wiki)
-<!-- Website link : [Here ](https://www.feedourmind.com/) --> 
+# FEED OUR MIND
+Website link : [Here ](https://www.feedourmind.com/)
 
-Read First : [FeedOurMind Rules](https://github.com/eburen/FEEDOURMIND_EDIT/wiki/TEAM-WORK-RULE/)
+> TEAM: 
 
-### RECENTLY NEWS
-***
-  > **`New Design Update`**   
-  > tblCommentsに「articleID」を追加しました   
-  > tblCommentsをtblArticlesに接続しました。   
-  > ![asd](https://raw.githubusercontent.com/eburen/FEEDOURMIND_EDIT/common/db/design.png)   
-
-***
-<br>   
-
-チーム: 
- ### 2年生
  - 戸田正毅
- - エブレン
- - ウー
- - シマ
- ### 1年生
- - アンミンパイ
- - リ　カトウ
- - コウ　トウショウ
- - シュ　コウセイ
+ - エブレン・バリク
+ - ウーサンリン
+ - シマルマタ
 
-プロジェクトは２０２１年から始まりました.
+
+This project has started from 2021.
+
+
+# STEP BY STEP TO IMPORT DATABASE
+<h3>Step1</h3>
+<img src="db/img/1.png" alt="" srcset="">
+<br>
+
+<h3>Step2</h3>
+<p>click import menu</p>
+<img src="db/img/2.png" alt="" srcset="">
+<br>
+
+<h3>Step3</h3>
+<p>Browse .sql file 「db_fom.sql」and click Go button</p>
+<img src="db/img/3.png" alt="" srcset="">
+<br>
+
+<h3>Step4</h3>
+<p>if process is success, will appear like this</p>
+<img src="db/img/4.png" alt="" srcset="">
+<br>
+
+<h3>Step5</h3>
+<p>click db_fom from left menu to see all tables</p>
+<img src="db/img/5.png" alt="" srcset="">
+<br>
+
+<h3>Step6</h3>
+<p>Click table to see the table record</p>
+<img src="db/img/6.png" alt="" srcset="">
+<br>
+
+<p>DONE! </p>
