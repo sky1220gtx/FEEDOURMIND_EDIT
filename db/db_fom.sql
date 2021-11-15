@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 10, 2021 at 08:16 AM
+-- Generation Time: Nov 15, 2021 at 08:45 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -138,7 +138,7 @@ CREATE TABLE `tblUsers` (
   `Gender` char(1) NOT NULL,
   `Birthday` date NOT NULL,
   `Email` varchar(50) NOT NULL,
-  `Status` char(1) NOT NULL,
+  `Status` char(1) DEFAULT '1',
   `Site` varchar(50) DEFAULT NULL,
   `Phone` varchar(20) DEFAULT NULL,
   `Address` varchar(255) DEFAULT NULL,
@@ -146,9 +146,9 @@ CREATE TABLE `tblUsers` (
   `Job` varchar(30) DEFAULT NULL,
   `Photo` varchar(255) DEFAULT NULL,
   `About` text DEFAULT NULL,
-  `DeleteKU` char(1) NOT NULL,
-  `Created` datetime NOT NULL,
-  `Updated` datetime NOT NULL
+  `DeleteKU` char(1) NOT NULL DEFAULT '1',
+  `Created` datetime NOT NULL DEFAULT current_timestamp(),
+  `Updated` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -157,7 +157,9 @@ CREATE TABLE `tblUsers` (
 
 INSERT INTO `tblUsers` (`userID`, `password`, `FirstName`, `LastName`, `Gender`, `Birthday`, `Email`, `Status`, `Site`, `Phone`, `Address`, `Country`, `Job`, `Photo`, `About`, `DeleteKU`, `Created`, `Updated`) VALUES
 ('evren', '1234', 'Evren', 'Balik', 'M', '2021-10-12', 'evren@tsb.com', '1', 'google.com', '+81999999', 'tokyp', 'turky', 'manager', NULL, 'asdasdasdsad', '1', '2021-10-28 05:18:48', '2021-10-28 05:18:48'),
-('henryust12', 'test', 'henry', 'simarmata', 'M', '2002-01-22', 'henryust12@gmail.com', '1', 'google.com', '+8100000000', 'tokyo', 'indonesia', 'tiktok', 'avatar', 'maybe handsome', '1', '2021-09-22 19:16:02', '2021-09-22 19:16:02');
+('henryust12', 'test', 'henry', 'simarmata', 'M', '2002-01-22', 'henryust12@gmail.com', '1', 'google.com', '+8100000000', 'tokyo', 'indonesia', 'tiktok', 'avatar', 'maybe handsome', '1', '2021-09-22 19:16:02', '2021-09-22 19:16:02'),
+('masaki', '1234', 'ma', 'saki', 'M', '2021-11-23', 'sakljdasd@kljfas.com', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '2021-11-15 16:30:13', '2021-11-15 16:30:13'),
+('oo', '1234', 'sanlin', 'oo', 'M', '2021-11-09', 'sakljdasd@kljfas.com', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '2021-11-15 16:31:15', '2021-11-15 16:31:15');
 
 --
 -- Indexes for dumped tables
