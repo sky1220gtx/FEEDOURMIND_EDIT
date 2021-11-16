@@ -1,5 +1,6 @@
 # FEED OUR MIND
-Website link : [Here ](https://www.feedourmind.com/)
+Website link : [Here ](http://fom2021.cf/)
+( Temporary )
 
 > TEAM: 
 
