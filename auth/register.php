@@ -23,7 +23,7 @@
             'bday' => $_POST['_bday'],
             'email' => $_POST['_email'],
         ];
-        $query = "INSERT INTO `tblUsers` (`userID`, `password`, `FirstName`, `LastName`, `Gender`, `Birthday`, `Email`) VALUES (:uid, :pwd,:fname,:lname,:gen,:bday,:email);";
+        $query = "INSERT INTO `fom_tblUsers` (`userID`, `password`, `FirstName`, `LastName`, `Gender`, `Birthday`, `Email`) VALUES (:uid, :pwd,:fname,:lname,:gen,:bday,:email);";
         $stmt = $dbh->prepare($query);
         $stmt->execute($data);
         
