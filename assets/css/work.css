@@ -1,0 +1,44 @@
+/* here is variable Area -- START */
+
+
+/* here is variable Area -- END */
+
+.container{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+h1{
+    text-align: center;
+    padding-top: 60px;
+}
+.view_box{
+    width: 100%;
+    height: 300px;
+    padding-bottom: 70px;
+}
+.left_pic_box{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+
+
+.right_text_box{
+    width: 46%;
+    height: 100%;
+    float: left;
+    margin-left: 4%;
+    
+}
+h2{
+    line-height: 25px;
+    margin-top: 0px;
+
+}
+h5{
+    font-weight: 500;
+}
+a{
+    text-decoration: none;
+}

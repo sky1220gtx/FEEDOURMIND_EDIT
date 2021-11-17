@@ -212,6 +212,9 @@ p{
   background-color: white;
   margin-top: 70px;
 }
+.space p{
+  margin-top: 15px;
+}
 
 /*footer*/
 .footer-bg{
@@ -350,4 +353,5 @@ p{
   
     float: left;
   }
+  /**/
   
