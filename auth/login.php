@@ -8,7 +8,7 @@ if($_POST['txtID']){
 
     include_once 'config.php';
     // SELECT  START
-    $query = 'SELECT * FROM tblUsers WHERE `userID` = :uid AND `password` = :pass';
+    $query = 'SELECT * FROM fom_tblUsers WHERE `userID` = :uid AND `password` = :pass';
     $stmt = $dbh->prepare($query);
     $uid = $_POST['txtID'];
     $pass = $_POST['txtPass'];
