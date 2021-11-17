@@ -1,5 +1,6 @@
 # FEED OUR MIND
-Website link : [Here ](https://www.feedourmind.com/)
+Website link : [Here ](http://fom2021.cf/)
+( Temporary )
 
 > TEAM: 
 
@@ -8,6 +9,10 @@ Website link : [Here ](https://www.feedourmind.com/)
  - ウーサンリン
  - シマルマタ
 
-
+### 1年生
+ - アンミンパイ
+ - リ　カトウ
+ - まき
+ - コウ　トウショウ
+ - シュ　コウセイ   
 This project has started from 2021.
-henryust12/test
