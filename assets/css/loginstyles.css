@@ -9,7 +9,7 @@ body{
     margin:15px auto; 
 }
 input[type="text"], input[type="password"], input[type="email"]{
-    width: 150px;
+    width: 250px;
     outline: 0;
     border: 0px solid;
     border-radius: 12px;
@@ -53,6 +53,7 @@ input[type="submit"]:hover{
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
+    height: 1800px;
     
 }
 .wrapper > * {
@@ -72,7 +73,7 @@ input[type="submit"]:hover{
     float: left;
     width:100%;
     min-height: 100vh;
-    background: url("https://unsplash.com/photos/nvFpb_MMRj8/download?force=true")  no-repeat ;
+    background: url(/assets/img/photo-1455849318743-b2233052fcff.jpg)  no-repeat ;
     /*background-image: url("loginback.webp");*/
     background-size: cover;
 }
@@ -121,11 +122,11 @@ input[type="submit"]:hover{
 h1{
     font-family: 'Montserrat;';
     font-weight: 900;
-    color:white;
+    color:rgb(255, 255, 255);
 }
 
 h1 span{
-    color:orange;
+    color:rgb(243, 169, 31);
 }
 
 
@@ -139,4 +140,53 @@ h1 span{
    .login, .register{
        width: 100%;
    }
+}
+
+.inputBx a{
+    color: rgb(104, 236, 197);
+}
+
+.inputBx input{
+    width: 150px;
+}
+
+h3 {
+    color: rgb(190, 113, 113);
+    text-align: center;
+    margin: -10px 0 10px;
+    font-weight: 500;
+}
+
+.sci {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sci li {
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #607d8b;
+    border-radius: 50%;
+    /* margin: 0 7px; */
+    margin: 5px 5px;
+    cursor: pointer;
+
+  
+}
+
+.sci{
+    margin-left: 35px;
+    margin-top: -5px;
+}
+.sci li:hover {
+    background: #ff4584;
+}
+
+.form-cont input{
+    margin-top: 10px;
 }
