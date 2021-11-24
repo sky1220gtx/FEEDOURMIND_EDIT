@@ -1,4 +1,4 @@
-<?php
+<?php 
 // Variables
 $fom_title = 'Feed Our Mind';
 ?>
