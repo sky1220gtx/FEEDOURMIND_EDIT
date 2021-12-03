@@ -1,4 +1,13 @@
 <?php
+session_start();
+if (isset($_SESSION['fom_id'])) {
+    echo 'Exist';
+} else {
+    echo 'Not Exist';
+}
+?>
+
+<?php
 // Variables
 $fom_title = 'Feed Our Mind';
 ?>

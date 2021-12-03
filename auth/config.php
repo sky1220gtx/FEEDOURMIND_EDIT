@@ -1,7 +1,7 @@
 <?php
 // referenced link
 // https://www.php.net/manual/en/book.pdo.php
-include 'getServerName.php';
+include 'auth/getServerName.php';
 if($ServerName=='shimatech.net'){
     $hostname = '';
     $db = '';
@@ -23,9 +23,10 @@ if($ServerName=='shimatech.net'){
     Using try/catch around the constructor is still valid even though we set the ERRMODE to WARNING since
     PDO::__construct will always throw a PDOException if the connection fails.
 */
+// echo '<h1>TEST</h1>';
 try {
     $dbh = new PDO($dsn, $hostuser, $hostpass, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
-    // echo 'Connection Success';
+    // echo '<h1>Connection Success</h1>';
 } catch (PDOException $e) {
     echo 'Connection failed: ' . $e->getMessage();
     exit;

@@ -16,7 +16,7 @@
                         <input type="submit" value="Login" name="" style="margin-top: -20px;font-weight: bold;">
                     </div>
                     <div class="inputBx">
-                        <p style="color: rgb(255, 255, 255);margin-top: -15px;">Don't have an account?<a href="#"> Sign
+                        <p style="color: rgb(255, 255, 255);margin-top: -15px;">Don't have an account?<a href="signup.php"> Sign
                                 up</a></p>
                     </div>
                     <!-- <div id="container">
