@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<title>FeedOurMind</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/form1_style.css">
+
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+                
+                <a href="#home" class="w3-bar-item w3-button w3-wide"> <img src="assets/logo/Logo.png" alt="">FeedOurMind</a>
+            
+            <!-- Right-sided navbar links -->
+            
+            <div class="newnavi">
+                <div class="w3-right w3-hide-small">
+        
+                        <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+                        <a href="articles.html" class="w3-bar-item w3-button">ARTICLES</a>
+                        <a href="#team" class="w3-bar-item w3-button">PROFLIE</a>
+                        <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+                        <a href="loginset.html" class="w3-bar-item w3-button" style="margin-right: 30px;">LOGIN</a>
+                    <!--<i class="fa fa-user">
+                        <i class="fa fa-th">
+                            <i class="fa fa-send">
+                                <i class="fa fa-envelope">-->
+                    <!-- <a>
+                        <form action="/action_page.php"></form>
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </a> -->
+                    
+                </div>
+            
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+        <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+        <a href="articles.html" onclick="w3_close()" class="w3-bar-item w3-button">ARTICLES</a>
+        <a href="#wo" onclick="w3_close()" class="w3-bar-item w3-button">PROFILE</a>
+        <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="loginset.html" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
+    </nav>
+
+    <div class="wrapper">        
+        <h2 class="form-signin-heading">Create Your Account</h2>
+        <form action="" method="POST" class="form-signin">
+        
+        <label>UserId</label><br>
+        <input type="text" name="userid" size="15" placeholder="UserId">
+        <br>
+        <label>Password:</label><br>
+        <input type="password" name="pass" size="15" maxlength="10" placeholder="Password">
+        </label>
+        <br>
+        <label>Firstname:</label><br>
+        <input type="text" name="first" size="15" placeholder="Your Firstname">
+            <br>
+        <label>Lastname:</label><br>
+        <input type="text" name="last" size="15" placeholder="Your Lastname">
+        <br>
+        <label>Age:</label><br>
+        <input type="number" name="age" size="15" placeholder="Your Age">
+            <br>
+        <label>Birthday:</label><br>
+        <input type="date" name="birthday" value="" placeholder="Your Birthday">
+        <br>
+        <label>Mail address</label><br>
+        <input type="email" name="email-address" value="" placeholder="Mail address">
+        <br>
+        <label>Phone number:</label><br>
+        <input type="tel" name="phone" size="15" placeholder="Phone number" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+
+        <br>
+        <label>Country:</label><br>
+        <input type="text" name="country" size="15" value="" placeholder="Country">
+        <br>
+        <label>Job:</label><br>
+        <input type="text" name="job" size="15" value="" placeholder="Job">
+            <br>
+    
+    <div id="btn">
+        <button class="button01" type="submit">Submit</button>
+        <button class="button01" type="reset">Reset</button>
+    </div>
+</div>
+</form>
+    <!-- Footer -->
+    <footer class="footer-bg">
+        <!--<footer class="w3-center w3-black w3-padding-64">-->
+            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+            <div class="w3-xlarge w3-section">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <!-- <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+            </div>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">FEEDOURMIND</a></p>
+        </footer>
+    
+        <script>
+            // Modal Image Gallery
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+                var captionText = document.getElementById("caption");
+                captionText.innerHTML = element.alt;
+            }
+    
+    
+            // Toggle between showing and hiding the sidebar when clicking the menu icon
+            var mySidebar = document.getElementById("mySidebar");
+    
+            function w3_open() {
+                if (mySidebar.style.display === 'block') {
+                    mySidebar.style.display = 'none';
+                } else {
+                    mySidebar.style.display = 'block';
+                }
+            }
+    
+            // Close the sidebar with the close button
+            function w3_close() {
+                mySidebar.style.display = "none";
+            }
+        </script>
+    
+    </body>
+    
+    </html>
