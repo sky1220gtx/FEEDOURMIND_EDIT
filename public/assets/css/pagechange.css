@@ -51,6 +51,7 @@
 }
 h1{
     line-height: normal;
+    
 }
 p{
     font-size: 15px;
@@ -64,13 +65,13 @@ h3{
     
 }
 h4{
-    color: gray;
+    color: rgb(128, 128, 128);
 }
 p{
     color: rgb(51, 47, 47);
 }
 .title p{
-    color: gray;
+    color: rgb(128, 128, 128);
     margin-top: -20px;
 }
 
