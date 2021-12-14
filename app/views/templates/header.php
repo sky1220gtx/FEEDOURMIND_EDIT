@@ -31,7 +31,7 @@
         
                         <a href="./" class="w3-bar-item w3-button">HOME</a>
                         <a href="./work" class="w3-bar-item w3-button">ARTICLES</a>
-                        <a href="#team" class="w3-bar-item w3-button">PROFILE</a>
+                        <a href="./profile" class="w3-bar-item w3-button">PROFILE</a>
                         <a href="./about" class="w3-bar-item w3-button">ABOUT</a>
                         <a href="./login" class="w3-bar-item w3-button" style="margin-right: 30px;">LOGIN</a>
                     <!--<i class="fa fa-user">
@@ -61,7 +61,7 @@
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
         <a href="./" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
         <a href="./work" onclick="w3_close()" class="w3-bar-item w3-button">ARTICLES</a>
-        <a href="#wo" onclick="w3_close()" class="w3-bar-item w3-button">PROFLIE</a>
+        <a href="./profile" onclick="w3_close()" class="w3-bar-item w3-button">PROFLIE</a>
         <a href="./about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
         <a href="./login" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
     </nav>
