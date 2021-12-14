@@ -59,9 +59,9 @@
     <!-- Sidebar on small screens when clicking the menu icon -->
     <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-        <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
-        <a href="work.html" onclick="w3_close()" class="w3-bar-item w3-button">ARTICLES</a>
+        <a href="./" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+        <a href="./work" onclick="w3_close()" class="w3-bar-item w3-button">ARTICLES</a>
         <a href="#wo" onclick="w3_close()" class="w3-bar-item w3-button">PROFLIE</a>
-        <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-        <a href="loginset.html" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
+        <a href="./about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="./login" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
     </nav>
