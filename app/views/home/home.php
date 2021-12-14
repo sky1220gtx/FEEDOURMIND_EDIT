@@ -1,69 +1,11 @@
-<!DOCTYPE html>
-<html>
-<title>FeedOurMind</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="public/assets/css/reset.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
-<link rel="stylesheet" href="public/assets/css/style.css">
+<?php
+include 'app/views/templates/header.php';
+// *************************************
+?>
 
-<body>
 
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-bar w3-white w3-card" id="myNavbar">
-                
-                <a href="#home" class="w3-bar-item w3-button w3-wide"> <img src="public/assets/logo/Logo.png" alt="">FeedOurMind</a>
-            
-            <!-- Right-sided navbar links -->
-            
-            <div class="newnavi">
-                <div class="w3-right w3-hide-small">
-        
-                        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-                        <a href="#team" class="w3-bar-item w3-button">HOME</a>
-                        <a href="work.html" class="w3-bar-item w3-button">ARTICLES</a>
-                        <a href="#pricing" class="w3-bar-item w3-button">SERVICE</a>
-                        <a href="loginset.html" class="w3-bar-item w3-button" style="margin-right: 30px;">LOGIN</a>
-                    <!--<i class="fa fa-user">
-                        <i class="fa fa-th">
-                            <i class="fa fa-send">
-                                <i class="fa fa-envelope">-->
-                    <!-- <a>
-                        <form action="/action_page.php"></form>
-                            <input type="text" placeholder="Search.." name="search">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
-                    </a> -->
-                    
-                </div>
-            
-            </div>
-            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </div>
-
-    <!-- Sidebar on small screens when clicking the menu icon -->
-    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-        <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">SERIVCE</a>
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-    </nav>
-
-    <!-- Header with full-height image -->
-    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
         <div class="header-font">
         <div class="w3-display-left w3-text-white" style="padding:48px">
             <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
@@ -84,7 +26,7 @@
             <!--<i class="fa fa-snapchat w3-hover-opacity"></i>
             <i class="fa fa-pinterest-p w3-hover-opacity"></i>-->
             <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
+            <!-- <i class="fa fa-linkedin w3-hover-opacity"></i> -->
         </div>
     </div>
     </header>
@@ -95,33 +37,6 @@
         <div class="quote-box">
         <P>“Opportunities don't happen, you create them.” </P></div>
     </div>
-    <!-- About Section 
-    <div class="w3-container" style="padding:128px 16px" id="about">
-        <h3 class="w3-center">ABOUT THE COMPANY</h3>
-        <p class="w3-center w3-large">Key features of our company</p>
-        <div class="w3-row-padding w3-center" style="margin-top:64px">
-            <div class="w3-quarter">
-                <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-                <p class="w3-large">Responsive</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-            </div>
-            <div class="w3-quarter">
-                <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-                <p class="w3-large">Passion</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-            </div>
-            <div class="w3-quarter">
-                <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-                <p class="w3-large">Design</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-            </div>
-            <div class="w3-quarter">
-                <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-                <p class="w3-large">Support</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-            </div>
-        </div>
-    </div>-->
 
     <!-- Promo Section - "We know design" -->
     
@@ -131,7 +46,7 @@
                 <h3>We know design </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.,<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.
                 </p>
-                <p><button class="w3-button w3-light-grey w3-block"><a href="pagechange.html"><i class="fa fa-arrow-circle-right"></i> Read more</a></button></p>
+                <p><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
             </div>
             <div class="w3-col m6">
                 <img class="w3-image w3-round-large" src="public/assets/img/pic5.jpg" alt="Buildings" width="600" height="394">
@@ -150,27 +65,24 @@
                 <img src="public/assets/img/pic45.jpg" alt="Sandwich" style="width:100%">
                 <h3>The Perfect Sandwich, A Real NYC Classic</h3>
                 <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                <p><button class="w3-button w3-light-grey w3-block"><a href="pagechange.html"><i class="fa fa-arrow-circle-right"></i> Read more</a></button></p>
+                <p><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
             </div>
             <div class="w3-quarter">
                 <img src="public/assets/img/pic45.jpg" alt="Steak" style="width:100%">
                 <h3>Let Me Tell You About This Steak</h3>
                 <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                <p><button class="w3-button w3-light-grey w3-block"><a href="pagechange.html"><i class="fa fa-arrow-circle-right"></i> Read more</a></button></p>
-            </div>
+                <p><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>            </div>
             <div class="w3-quarter">
                 <img src="public/assets/img/pic45.jpg" alt="Cherries" style="width:100%">
                 <h3>Cherries, interrupted</h3>
                 <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
                 <p>What else?</p>
-                <p><button class="w3-button w3-light-grey w3-block"><a href="pagechange.html"><i class="fa fa-arrow-circle-right"></i> Read more</a></button></p>
-            </div>
+                <p><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>            </div>
             <div class="w3-quarter">
                 <img src="public/assets/img/pic45.jpg" alt="Pasta and Wine" style="width:100%">
                 <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
                 <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                <p><button class="w3-button w3-light-grey w3-block"><a href="pagechange.html"><i class="fa fa-arrow-circle-right"></i> Read more</a></button></p>
-            </div>
+                <p><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>            </div>
         </div>
         <!-- Second Photo Grid-->
         <div class="w3-row-padding w3-padding-16 w3-center" id="sec-work">
@@ -178,26 +90,22 @@
                 <img src="public/assets/img/pic45.jpg" alt="Popsicle" style="width:100%">
                 <h3>All I Need Is a Popsicle</h3>
                 <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                <p><button class="w3-button w3-light-grey w3-block"><a href="pagechange.html"><i class="fa fa-arrow-circle-right"></i> Read more</a></button></p>
-            </div>
+                <p><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>            </div>
             <div class="w3-quarter">
                 <img src="public/assets/img/pic45.jpg" alt="Salmon" style="width:100%">
                 <h3>Salmon For Your Skin</h3>
                 <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                <p><button class="w3-button w3-light-grey w3-block"><a href="pagechange.html"><i class="fa fa-arrow-circle-right"></i> Read more</a></button></p>
-            </div>
+                <p><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>            </div>
             <div class="w3-quarter">
                 <img src="public/assets/img/pic45.jpg" alt="Sandwich" style="width:100%">
                 <h3>The Perfect Sandwich, A Real Classic</h3>
                 <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                <p><button class="w3-button w3-light-grey w3-block"><a href="pagechange.html"><i class="fa fa-arrow-circle-right"></i> Read more</a></button></p>
-            </div>
+                <p><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>            </div>
             <div class="w3-quarter">
                 <img src="public/assets/img/pic45.jpg" alt="Croissant" style="width:100%">
                 <h3>Le French</h3>
                 <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                <p><button class="w3-button w3-light-grey w3-block"><a href="pagechange.html"><i class="fa fa-arrow-circle-right"></i> Read more</a></button></p>
-            </div>
+                <p><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>            </div>
         </div>
 
         <!-- Pagination -->
@@ -212,26 +120,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Promo Section "Statistics"
-    <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
-        <div class="w3-quarter">
-            <span class="w3-xxlarge">14+</span>
-            <br>Partners
-        </div>
-        <div class="w3-quarter">
-            <span class="w3-xxlarge">55+</span>
-            <br>Projects Done
-        </div>
-        <div class="w3-quarter">
-            <span class="w3-xxlarge">89+</span>
-            <br>Happy Clients
-        </div>
-        <div class="w3-quarter">
-            <span class="w3-xxlarge">150+</span>
-            <br>Meetings
-        </div>
-    </div> -->
 
     <!-- Team Section -->
     <div class="w3-container" style="padding:128px 16px;margin-top: -120px;" id="team">
@@ -319,62 +207,6 @@
         </div>
     </div>
 
-    <!-- Pricing Section
-    <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
-        <h3>おすすめ</h3>
-        <p class="w3-large">RECOMMENDED BOOKS</p>
-        <div class="w3-row-padding" style="margin-top:64px">
-            <div class="w3-third w3-section">
-                <ul class="w3-ul w3-white w3-hover-shadow">
-                    <li class="w3-black w3-xlarge w3-padding-32">START　UP</li>
-                    <li class="w3-padding-16"><b>10GB</b> Storage</li>
-                    <li class="w3-padding-16"><b>10</b> Emails</li>
-                    <li class="w3-padding-16"><b>10</b> Domains</li>
-                    <li class="w3-padding-16"><b>Endless</b> Support</li>
-                    <li class="w3-padding-16">
-                        <h2 class="w3-wide">$ 10</h2>
-                        <span class="w3-opacity">per month</span>
-                    </li>
-                    <li class="w3-light-grey w3-padding-24">
-                        <button class="w3-button w3-black w3-padding-large">BUY NOW</button>
-                    </li>
-                </ul>
-            </div>
-            <div class="w3-third">
-                <ul class="w3-ul w3-white w3-hover-shadow">
-                    <li class="w3-red w3-xlarge w3-padding-48">BUSINESS　MODEL</li>
-                    <li class="w3-padding-16"><b>25GB</b> Storage</li>
-                    <li class="w3-padding-16"><b>25</b> Emails</li>
-                    <li class="w3-padding-16"><b>25</b> Domains</li>
-                    <li class="w3-padding-16"><b>Endless</b> Support</li>
-                    <li class="w3-padding-16">
-                        <h2 class="w3-wide">$ 25</h2>
-                        <span class="w3-opacity">per month</span>
-                    </li>
-                    <li class="w3-light-grey w3-padding-24">
-                        <button class="w3-button w3-black w3-padding-large">BUY　NOW</button>
-                    </li>
-                </ul>
-            </div>
-            <div class="w3-third w3-section">
-                <ul class="w3-ul w3-white w3-hover-shadow">
-                    <li class="w3-black w3-xlarge w3-padding-32">DEEP WORK</li>
-                    <li class="w3-padding-16"><b>50GB</b> Storage</li>
-                    <li class="w3-padding-16"><b>50</b> Emails</li>
-                    <li class="w3-padding-16"><b>50</b> Domains</li>
-                    <li class="w3-padding-16"><b>Endless</b> Support</li>
-                    <li class="w3-padding-16">
-                        <h2 class="w3-wide">$ 50</h2>
-                        <span class="w3-opacity">per month</span>
-                    </li>
-                    <li class="w3-light-grey w3-padding-24">
-                        <button class="w3-button w3-black w3-padding-large">BUY　NOW</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>--> 
-
     <!-- Contact Section -->
     <!--<div class="contactsection">-->
     <div class="w3-container w3-light-grey" style="padding:10px 16px; " id="contact">
@@ -402,47 +234,11 @@
         </div>
         
     </div>
+    
 
-    <!-- Footer -->
-    <footer class="footer-bg">
-    <!--<footer class="w3-center w3-black w3-padding-64">-->
-        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <div class="w3-xlarge w3-section">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-        </div>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">FEEDOURMIND</a></p>
-    </footer>
+    
 
-    <script>
-        // Modal Image Gallery
-        function onClick(element) {
-            document.getElementById("img01").src = element.src;
-            document.getElementById("modal01").style.display = "block";
-            var captionText = document.getElementById("caption");
-            captionText.innerHTML = element.alt;
-        }
-
-
-        // Toggle between showing and hiding the sidebar when clicking the menu icon
-        var mySidebar = document.getElementById("mySidebar");
-
-        function w3_open() {
-            if (mySidebar.style.display === 'block') {
-                mySidebar.style.display = 'none';
-            } else {
-                mySidebar.style.display = 'block';
-            }
-        }
-
-        // Close the sidebar with the close button
-        function w3_close() {
-            mySidebar.style.display = "none";
-        }
-    </script>
-
-</body>
-
-</html>
+    <?php
+// *************************************
+include 'app/views/templates/footer.php';
+?>
