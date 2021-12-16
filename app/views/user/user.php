@@ -2,9 +2,12 @@
 
 <?php
 include 'app/models/user/user.php';
-User::show_user();
+
+// var_dump($x);
+$x=User::show_user();
+
 ?>
 
-<br><br>
+<hr>
 
 <a href="./login">user</a>

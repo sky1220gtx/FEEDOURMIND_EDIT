@@ -21,6 +21,8 @@ if ( isset($_GET['url']) ){
         include 'app/views/work/work.php';
     } else if( $url[0] == 'signup' ){
         include 'app/views/signup/signup.php';
+    } else if( $url[0] == 'profile' ){
+        include 'app/views/profile/Profile.php';
     } else if( $url[0] == 'user' ){
         include 'app/views/user/user.php';
     } else {
