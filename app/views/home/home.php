@@ -84,10 +84,10 @@ $popularArticle = Home::show_article_popular();
             </div>
         <?php
         }
-        ?>
-
-        <!-- Pagination -->
-        <div class="w3-center w3-padding-32">
+        ?>       
+    </div>
+    <!-- Pagination -->
+    <div class="w3-center w3-padding-32">
             <div class="w3-bar">
                 <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
                 <a href="#" class="w3-bar-item w3-black w3-button">1</a>
@@ -97,7 +97,6 @@ $popularArticle = Home::show_article_popular();
                 <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
             </div>
         </div>
-    </div>
 
     <!-- Team Section -->
     <div class="w3-container" style="padding:128px 16px;margin-top: -120px;" id="team">
