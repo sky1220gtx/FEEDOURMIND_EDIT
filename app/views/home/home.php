@@ -13,7 +13,8 @@ $recentArticle = Home::show_article_recent();
 $popularArticle = Home::show_article_popular();
 ?>
 
-<!-- Header with full-height image -->
+
+
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
         <div class="header-font">
         <div class="w3-display-left w3-text-white" style="padding:48px">
@@ -161,9 +162,8 @@ $popularArticle = Home::show_article_popular();
         </div>
         
     </div>
-    
 
-    
+
 
     <?php
 // *************************************

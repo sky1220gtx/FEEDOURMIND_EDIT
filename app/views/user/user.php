@@ -10,4 +10,4 @@ $x=User::show_user();
 
 <hr>
 
-<a href="./login">user</a>
+<a href="<?= rPath ?>login">user</a>

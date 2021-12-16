@@ -1,13 +1,30 @@
 <?php
 
 class DB_FOM{
-    // public static $hostname = 'localhost';
-    // public static $dbname = 'web_app';
-    // public static $username = 'master_user';
-    // public static $password = 'master_user';
+    private static function DB(){
+        $db = [];
+        $db['hostname'] = '31.220.110.51';
+        $db['dbname'] = 'u730565153_fom';
+        $db['username'] = 'u730565153_Feedourmind21';
+        $db['password'] = 'Feedourmind21';
+        return $db;
+    }
 
-    public static $hostname = '31.220.110.51';
-    public static $dbname = 'u730565153_fom';
-    public static $username = 'u730565153_Feedourmind21';
-    public static $password = 'Feedourmind21';
+    public static function FOM_SELECT($q){
+        $db=self::DB();
+        $pdo = new PDO(
+            //DB情報
+            'mysql:host='.$db['hostname'].';dbname='.$db['dbname'].';charset=utf8',
+            //ID(ユーザ名)
+            ''.$db['username'].'',
+            //パスワード
+            ''.$db['password'].''
+        );   
+        $tmp = [];
+        $results = $pdo->query($q);
+        while($row = $results->fetch(PDO::FETCH_ASSOC)) {
+            $tmp[] = $row;
+        }
+        return $tmp;
+    }
 }
