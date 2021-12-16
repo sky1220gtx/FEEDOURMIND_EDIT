@@ -1,3 +1,3 @@
 <?php
 // これはメインインデクス (Root Index)
-include 'public/index.php';
+require_once 'public/index.php';
