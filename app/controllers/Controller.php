@@ -14,29 +14,34 @@ class Controller {
             if( $url[0] == 'about' ){
                 include vPath.'about/about.php';
             } else if( $url[0] == 'login' ){
-                include 'app/views/login/Login.php';
+                include vPath.'login/Login.php';
                 if(isset($url[1])){
-                    include 'app/models/login/Login.php';
+                    include vPath.'login/Login.php';
                     Login::tes($url[1]);
                     
                 }
             } else if( $url[0] == 'work' ){
-                include 'app/views/work/work.php';
+                include vPath.'work/work.php';
+                if ( isset($url[1]) ){
+                    echo $url[1];
+                }
             } else if( $url[0] == 'signup' ){
-                include 'app/views/signup/signup.php';
+                include vPath.'signup/signup.php';
             } else if( $url[0] == 'profile' ){
-                include 'app/views/profile/Profile.php';
+                include vPath.'profile/Profile.php';
             } else if( $url[0] == 'user' ){
-                include 'app/views/user/user.php';
+                include vPath.'user/user.php';
             } else {
-                include 'app/views/404/404.php';
+                include vPath.'404/404.php';
             }
 
 
         } else {
             // default page
-            include 'app/views/home/home.php';
+            include vPath.'home/home.php';
             
         }
+
+        
     }
 }

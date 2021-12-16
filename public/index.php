@@ -14,11 +14,18 @@ define("mPath","app/models/");
 define("vPath","app/views/");
 // service path
 define("sPath","app/services/");
+// Root Path
+$ServerName = $_SERVER['SERVER_NAME'];
+if ( $ServerName == '127.0.0.1' || $ServerName == 'localhost' ){
+    define("rPath", "/fom/");
+} else {
+    define("rPath", "/");
+}
 
 
 // initial Controller
 include cPath.'Controller.php';
 Controller::fomController();
-die();
+
 
 
