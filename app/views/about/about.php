@@ -50,7 +50,7 @@ include 'app/views/templates/header.php';
                 </button>
             
                 <div class="arigato">
-                        <img src="public/assets/img/arigatou.jpg" width="160px" height="100px">
+                        <img src="<?= rPath ?>public/assets/img/arigatou.jpg" width="160px" height="100px">
                 </div>
             </div>
 

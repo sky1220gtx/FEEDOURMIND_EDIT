@@ -13,7 +13,8 @@ $recentArticle = Home::show_article_recent();
 $popularArticle = Home::show_article_popular();
 ?>
 
-<!-- Header with full-height image -->
+
+
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
         <div class="header-font">
         <div class="w3-display-left w3-text-white" style="padding:48px">
@@ -60,7 +61,7 @@ $popularArticle = Home::show_article_popular();
                 <p><a href="#"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
             </div>
             <div class="w3-col m6">
-                <!-- <img class="w3-image w3-round-large" src="public/assets/img/pic5.jpg" alt="Buildings" width="600" height="394"> -->
+                <!-- <img class="w3-image w3-round-large" src="<?= rPath ?>public/assets/img/pic5.jpg" alt="Buildings" width="600" height="394"> -->
                 <?= $topArticle[0]['VideoLink'] ?>
             </div>
         </div>
@@ -76,17 +77,17 @@ $popularArticle = Home::show_article_popular();
         for($i=0; $i<sizeof($recentArticle); $i++){
             ?>
             <div class="w3-quarter">
-                <img src="public/assets/img/pic45.jpg" alt="Sandwich" style="width:100%">
+                <img src="<?= rPath ?>public/assets/img/pic45.jpg" alt="Sandwich" style="width:100%">
                 <h3><?= $recentArticle[$i]['title'] ?></h3>
                 <p><?= mb_strimwidth($recentArticle[$i]['content'], 0, 100, "...") // Limit echo 100 chars ?></p>
                 <p><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
             </div>
         <?php
         }
-        ?>
-
-        <!-- Pagination -->
-        <div class="w3-center w3-padding-32">
+        ?>       
+    </div>
+    <!-- Pagination -->
+    <div class="w3-center w3-padding-32">
             <div class="w3-bar">
                 <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
                 <a href="#" class="w3-bar-item w3-black w3-button">1</a>
@@ -96,7 +97,6 @@ $popularArticle = Home::show_article_popular();
                 <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
             </div>
         </div>
-    </div>
 
     <!-- Team Section -->
     <div class="w3-container" style="padding:128px 16px;margin-top: -120px;" id="team">
@@ -107,7 +107,7 @@ $popularArticle = Home::show_article_popular();
             ?>
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-card">
-                    <img src="public/assets/img/pic5.jpg" alt="John" style="width:100%">
+                    <img src="<?= rPath ?>public/assets/img/pic5.jpg" alt="John" style="width:100%">
                     <div class="w3-container">
                         <h3><?= $popularArticle[$i]['title'] ?></h3>
                         <p class="w3-opacity">by: <?= $popularArticle[$i]['userID'] ?></p>
@@ -161,9 +161,8 @@ $popularArticle = Home::show_article_popular();
         </div>
         
     </div>
-    
 
-    
+
 
     <?php
 // *************************************

@@ -9,7 +9,7 @@ include 'app/views/templates/header.php';
         <hr><br>
         <div class="view_box" style="display: flow-root;">
             <div class="w3-third">
-                <img src="public/assets/img/IMG_4302.jpg" class="image1" alt="pic" width="80%" height="130%"> 
+                <img src="<?= rPath ?>public/assets/img/IMG_4302.jpg" class="image1" alt="pic" width="80%" height="130%"> 
             </div>
             <div class="w3-thirdquarter">
                 
@@ -26,7 +26,7 @@ include 'app/views/templates/header.php';
 
          <div class="view_box" style="display: flow-root;">
             <div class="w3-third">
-                <img src="public/assets/img/IMG_4303.jpg" class="image1" alt="pic" width="80%" height="130%"> 
+                <img src="<?= rPath ?>public/assets/img/IMG_4303.jpg" class="image1" alt="pic" width="80%" height="130%"> 
             </div>
             <div class="w3-thirdquarter">
                 
@@ -42,7 +42,7 @@ include 'app/views/templates/header.php';
         </div> 
         <div class="view_box" style="display: flow-root;">
             <div class="w3-third">
-                <img src="public/assets/img/IMG_4304.jpg" class="image1" alt="pic" width="80%" height="130%"> 
+                <img src="<?= rPath ?>public/assets/img/IMG_4304.jpg" class="image1" alt="pic" width="80%" height="130%"> 
             </div>
             <div class="w3-thirdquarter">
                 
@@ -58,7 +58,7 @@ include 'app/views/templates/header.php';
         </div>  
         <div class="view_box" style="display: flow-root;">
             <div class="w3-third">
-                <img src="public/assets/img/IMG_4305.jpg" class="image1" alt="pic" width="80%" height="130%"> 
+                <img src="<?= rPath ?>public/assets/img/IMG_4305.jpg" class="image1" alt="pic" width="80%" height="130%"> 
             </div>
             <div class="w3-thirdquarter">
                 
@@ -74,7 +74,7 @@ include 'app/views/templates/header.php';
         </div>  
         <div class="view_box" style="display: flow-root;">
             <div class="w3-third">
-                <img src="public/assets/img/IMG_4302.jpg" class="image1" alt="pic" width="80%" height="130%"> 
+                <img src="<?= rPath ?>public/assets/img/IMG_4302.jpg" class="image1" alt="pic" width="80%" height="130%"> 
             </div>
             <div class="w3-thirdquarter">
                 
