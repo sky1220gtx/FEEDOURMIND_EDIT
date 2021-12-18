@@ -1,5 +1,5 @@
 <?php
-include 'app/views/templates/header.php';
+include vPath.'templates/header.php';
 // *************************************
 ?>
 
@@ -7,7 +7,8 @@ include 'app/views/templates/header.php';
 
 <?php
 // call services
-include 'app/services/fomSession.php';
+include sPath.'Session.php';
+
 ?>
 
 
@@ -22,18 +23,13 @@ include 'app/services/fomSession.php';
             echo '<P>“Please Login First” </P>';
         }
         ?>
-        <P>
-        <?php
-            // select from user
-            include 'app/models/user/user.php';
-            User::show_user();
-        ?>
-        </P></div>
+    </div>
     </div>
 <br><br>
+Clickl <a href="<?= rPath.'logout' ?>">Here</a> to logout
 
 
 <?php
 // *************************************
-include 'app/views/templates/footer.php';
+include vPath.'templates/footer.php';
 ?>

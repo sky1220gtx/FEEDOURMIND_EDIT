@@ -20,6 +20,8 @@ class Controller {
                     Login::tes($url[1]);
                     
                 }
+            } else if( $url[0] == 'logout' ){
+                include vPath.'logout/Logout.php';
             } else if( $url[0] == 'work' ){
                 include vPath.'work/work.php';
                 if ( isset($url[1]) ){

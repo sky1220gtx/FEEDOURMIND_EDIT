@@ -1,11 +1,11 @@
 <?php
-include 'app/views/templates/header.php';
+include vPath.'templates/header.php';
 // *************************************
 ?>
 
 <?php
 // Call Model
-include 'app/models/home/Home.php';
+include mPath.'home/Home.php';
 
 // call function
 $topArticle = Home::show_article_home_top_1();
@@ -166,5 +166,5 @@ $popularArticle = Home::show_article_popular();
 
     <?php
 // *************************************
-include 'app/views/templates/footer.php';
+include vPath.'templates/footer.php';
 ?>

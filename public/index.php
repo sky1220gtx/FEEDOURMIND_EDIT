@@ -6,6 +6,9 @@
 */
 
 
+session_start();
+
+
 // init defines
 include 'app/services/shortcut.php';
 

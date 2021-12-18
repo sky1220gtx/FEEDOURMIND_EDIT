@@ -1,16 +1,40 @@
 <?php
-include 'app/views/templates/header.php';
+include vPath.'templates/header.php';
 // *************************************
+session_start();
+include sPath.'Session.php';
+
+
+// Call Model
+include mPath.'login/Login.php';
+
+// call function
+$dataUser = Login::check_login();
+
+
+if( isset($_SESSION['fom_user_name']) ){
+    header('Location: '.rPath.'profile');
+}
+
+if ( isset($_POST['username']) ){
+    ?><br><br><br><br><br><br><br><br><br><br><?php
+    $_SESSION['fom_user_name'] = $dataUser[0]['userID'];
+    $_SESSION['fom_user_password'] = $dataUser[0]['password'];
+    header('Location: '.rPath.'login');
+    
+}
+
+
 ?>
 
     <div class="wrapper">
           <div class="main">
             
             <div class="login">
-              <form class="form-cont">
+              <form class="form-cont" action="<?= rPath.'login' ?>" method="post">
                   <h1>Log<span>!</span>n</h1>
-                  <input type="text" placeholder="username" id="username">
-                  <input type="password" placeholder="password" id="password">
+                  <input type="text" placeholder="username" id="username" name="username">
+                  <input type="password" placeholder="password" id="password" name="password">
                   <div class="remember">
                     <p style="color: rgb(255, 255, 255);margin-top: -15px;"><label><input type="checkbox" name=""> Remember me</label></p>
                 </div>
