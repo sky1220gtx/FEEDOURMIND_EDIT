@@ -4,13 +4,12 @@
 * 「Public」フォルダ意外は「ユーザー」からのアクセスはできません。
 *  
 */
-
-
-session_start();
-
-
 // init defines
 include 'app/services/shortcut.php';
+
+// init Session
+include sPath.'Session.php';
+
 
 // init Controller
 include cPath.'Controller.php';

@@ -1,8 +1,6 @@
 <?php
 include vPath.'templates/header.php';
 // *************************************
-session_start();
-include sPath.'Session.php';
 
 
 // Call Model

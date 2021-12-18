@@ -3,15 +3,6 @@ include vPath.'templates/header.php';
 // *************************************
 ?>
 
-
-
-<?php
-// call services
-include sPath.'Session.php';
-
-?>
-
-
 <div class="quotes">
     <br><br><br>
         <h3>Profile Page</h3>
