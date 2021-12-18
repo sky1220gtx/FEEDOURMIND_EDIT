@@ -29,7 +29,7 @@
             <div class="newnavi">
                 <div class="w3-right w3-hide-small">
         
-                        <a href="<?= rPath ?>" class="w3-bar-item w3-button">HOMEs</a>
+                        <a href="<?= rPath ?>" class="w3-bar-item w3-button">HOME</a>
                         <a href="<?= rPath ?>work" class="w3-bar-item w3-button">ARTICLES</a>
                         <a href="<?= rPath ?>profile" class="w3-bar-item w3-button">PROFILE</a>
                         <a href="<?= rPath ?>about" class="w3-bar-item w3-button">ABOUT</a>
