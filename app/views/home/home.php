@@ -4,13 +4,11 @@ include vPath.'templates/header.php';
 ?>
 
 <?php
-// Call Model
-include mPath.'home/Home.php';
 
 // call function
-$topArticle = Home::show_article_home_top_1();
-$recentArticle = Home::show_article_recent();
-$popularArticle = Home::show_article_popular();
+$topArticle = mHome::show_article_home_top_1();
+$recentArticle = mHome::show_article_recent();
+$popularArticle = mHome::show_article_popular();
 ?>
 
 

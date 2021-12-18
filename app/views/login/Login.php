@@ -3,11 +3,9 @@ include vPath.'templates/header.php';
 // *************************************
 
 
-// Call Model
-include mPath.'login/Login.php';
 
 // call function
-$dataUser = Login::check_login();
+$dataUser = mLogin::check_login();
 
 
 if( isset($_SESSION['fom_user_name']) ){

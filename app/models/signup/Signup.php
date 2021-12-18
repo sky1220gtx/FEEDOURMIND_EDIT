@@ -1,7 +1,6 @@
 <?php
 
-
-class mLogin {
+class Signup{
     public static function check_login(){
         $u=$_POST['username'];
         $p=$_POST['password'];
