@@ -3,6 +3,23 @@ include vPath.'templates/header.php';
 // *************************************
 ?>
 
+<?php
+
+if( isset($_SESSION['fom_user_name']) ){
+  header('Location: '.rPath.'profile');
+}
+
+if ( isset($_POST['username']) ){
+  ?><br><br><br><br><br><br><br><br><br><br><?php
+  $dataUser=Signup::insert();
+  $_SESSION['fom_user_name'] = $dataUser[0]['userID'];
+  $_SESSION['fom_user_password'] = $dataUser[0]['password'];
+  header('Location: '.rPath.'login');
+  
+}
+?>
+
+
 
     <div class="wrapper">
           <div class="main">
