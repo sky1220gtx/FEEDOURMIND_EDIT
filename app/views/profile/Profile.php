@@ -1,15 +1,7 @@
 <?php
-include 'app/views/templates/header.php';
+include vPath.'templates/header.php';
 // *************************************
 ?>
-
-
-
-<?php
-// call services
-include 'app/services/fomSession.php';
-?>
-
 
 <div class="quotes">
     <br><br><br>
@@ -18,22 +10,54 @@ include 'app/services/fomSession.php';
         <?php
         if($_SESSION['fom_user_name'] != ''){
             echo '<P>“Welcome” '.$_SESSION['fom_user_name'].'</P>';
+            global $dataUser;
+            $_POST['username']=$_SESSION['fom_user_name'];
+            $_POST['password']=$_SESSION['fom_user_password'];
+            $dataUser = mLogin::check_login();
         } else {
             echo '<P>“Please Login First” </P>';
         }
         ?>
-        <P>
-        <?php
-            // select from user
-            include 'app/models/user/user.php';
-            User::show_user();
-        ?>
-        </P></div>
     </div>
+</div>
+<hr>
+
+<br>
+<table style="width:50%;">
+    <tr>
+        <td>User ID</td>
+        <td><?= $dataUser[0]['userID'] ?></td>
+    </tr>
+    <tr>
+        <td>First Name</td>
+        <td><?= $dataUser[0]['FirstName'] ?></td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td><?= $dataUser[0]['LastName'] ?></td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td><?= $dataUser[0]['Gender'] ?></td>
+    </tr>
+    <tr>
+        <td>Birthday</td>
+        <td><?= $dataUser[0]['Birthday'] ?></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><?= $dataUser[0]['Email'] ?></td>
+    </tr>
+    <tr>
+        <td>Website</td>
+        <td><?= $dataUser[0]['Site'] ?></td>
+    </tr>
+</table>
 <br><br>
+Clickl <a href="<?= rPath.'logout' ?>">Here</a> to logout
 
 
 <?php
 // *************************************
-include 'app/views/templates/footer.php';
+include vPath.'templates/footer.php';
 ?>

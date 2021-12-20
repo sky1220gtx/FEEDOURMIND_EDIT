@@ -1,5 +1,5 @@
 <?php
-include 'app/database/Database.php';
+
 
 class User {
     public static function show_user(){

@@ -27,4 +27,18 @@ class DB_FOM{
         }
         return $tmp;
     }
+
+    public static function FOM_INSERT($q){
+        $db=self::DB();
+        $pdo = new PDO(
+            //DB情報
+            'mysql:host='.$db['hostname'].';dbname='.$db['dbname'].';charset=utf8',
+            //ID(ユーザ名)
+            ''.$db['username'].'',
+            //パスワード
+            ''.$db['password'].''
+        );   
+        //実行
+	    $pdo->query($q);
+    }
 }

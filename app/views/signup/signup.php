@@ -1,7 +1,24 @@
 <?php
-include 'app/views/templates/header.php';
+include vPath.'templates/header.php';
 // *************************************
 ?>
+
+<?php
+
+if( isset($_SESSION['fom_user_name']) ){
+  header('Location: '.rPath.'profile');
+}
+
+if ( isset($_POST['username']) ){
+  ?><br><br><br><br><br><br><br><br><br><br><?php
+  $dataUser=mSignup::insert();
+  $_SESSION['fom_user_name'] = $dataUser[0]['userID'];
+  $_SESSION['fom_user_password'] = $dataUser[0]['password'];
+  header('Location: '.rPath.'login');
+  
+}
+?>
+
 
 
     <div class="wrapper">
@@ -20,12 +37,13 @@ include 'app/views/templates/header.php';
             </div> end of login div-->
               
               <div class="register">
-                <form action="" class="form-cont">
+                <form action="<?= rPath.'signup' ?>" method="post" class="form-cont">
                   <h1>R<span>!</span>gister</h1>
-                  <input type="text" placeholder="username" id="username">
-                  <input type="email" placeholder="email" id="email">
-                  <input type="password" placeholder="password" class="password">
-                  <input type="password" placeholder="confirm password" class="password">            
+                  <?= $_SESSION['error_password'] ?>
+                  <input type="text" placeholder="username" id="username" name="username">
+                  <input type="email" placeholder="email" id="email" name="email">
+                  <input type="password" placeholder="password" class="password" name="password">
+                  <input type="password" placeholder="confirm password" class="password" name="cpassword">            
                   
                   <div id="container">
                     <input id="buttonLogin1" type="submit" value="Submit">

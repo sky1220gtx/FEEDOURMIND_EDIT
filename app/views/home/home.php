@@ -1,16 +1,14 @@
 <?php
-include 'app/views/templates/header.php';
+include vPath.'templates/header.php';
 // *************************************
 ?>
 
 <?php
-// Call Model
-include 'app/models/home/Home.php';
 
 // call function
-$topArticle = Home::show_article_home_top_1();
-$recentArticle = Home::show_article_recent();
-$popularArticle = Home::show_article_popular();
+$topArticle = mHome::show_article_home_top_1();
+$recentArticle = mHome::show_article_recent();
+$popularArticle = mHome::show_article_popular();
 ?>
 
 
@@ -166,5 +164,5 @@ $popularArticle = Home::show_article_popular();
 
     <?php
 // *************************************
-include 'app/views/templates/footer.php';
+include vPath.'templates/footer.php';
 ?>
