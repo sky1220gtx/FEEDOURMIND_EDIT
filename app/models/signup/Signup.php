@@ -1,5 +1,5 @@
 <?php
-
+// https://www.php.net/manual/en/filter.filters.sanitize.php
 class mSignup{
     public static function insert(){
         $u=htmlspecialchars($_POST['username']);
