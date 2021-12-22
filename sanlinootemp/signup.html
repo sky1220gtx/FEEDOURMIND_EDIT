@@ -10,7 +10,6 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="assets/css/style.css">
-      <link rel="stylesheet" href="assets/css/loginstyles.css">
       <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
 
       <title>Landing Page</title>
@@ -61,7 +60,7 @@
     <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
     <a href="loginset.html" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
 </nav>
-    <div class="wrapper">
+    <div class="signup_wrapper">
           <div class="main">
             
             <!--<div class="login">
@@ -81,10 +80,10 @@
                   <h1>R<span>!</span>gister</h1>
                   <input type="text" placeholder="username" id="username">
                   <input type="email" placeholder="email" id="email">
-                  <input type="password" placeholder="password" class="password">
-                  <input type="password" placeholder="confirm password" class="password">            
+                  <input type="password" placeholder="password" id="password">
+                  <input type="password" placeholder="confirm password" id="confirm_password">            
                   
-                  <div id="container">
+                  <div id="button_container">
                     <input id="buttonLogin1" type="submit" value="Submit">
                     <!-- <span style="color: rgb(255, 255, 255);">OR</span>
                     <a href="loginset.html"><input id="buttonLogin2"type="button" value="Login"></a> -->
@@ -99,6 +98,20 @@
           </div>
                    
     </div>
+    <script>
+        var password = document.getElementById("password")
+        , confirm_password = document.getElementById("confirm_password");
 
+        function validatePassword(){
+        if(password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+            confirm_password.setCustomValidity('');
+        }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    </script>
 </body>
 </html>

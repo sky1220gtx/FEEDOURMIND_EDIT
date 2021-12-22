@@ -1,23 +1,23 @@
 
 
-.container{
+.pagechange_container{
     display: flex;
     margin-top: 100px;
 }
 
-.left_container{
+.PCleft_container{
     width: 70%;
     margin-left: 8%;
     margin-right: 3%;
     margin-bottom: 5%;
 
 }
-.right_container{
+.PCright_container{
     padding-top: 10px;
     margin-right: 8%;
     width: 25%;
 }
-.search{
+.PC_search{
     /* margin-left: 2%; */
     margin-right: 2%;
     margin-bottom: 20px;
@@ -49,7 +49,7 @@
 .image_frame p{
     margin-top: 5px;
 }
-h1{
+.title h1{
     line-height: normal;
     
 }
@@ -64,7 +64,7 @@ h3{
     font-weight: bold;
     
 }
-h4{
+.comment h4{
     color: rgb(128, 128, 128);
 }
 p{
@@ -77,11 +77,11 @@ p{
 
 
 /* Video Upload Start*/
-.wrapper{
+.PC_wrapper{
     margin: 0 auto;
     width: 80%;
 }
-.videowrapper{
+.PC_videowrapper{
     position: relative;
     left: 90px;
     padding-top: 25px;
@@ -89,7 +89,7 @@ p{
     height: 0px;
 
 }
-.videowrapper iframe{
+.PC_videowrapper iframe{
     position: absolute;
     left: 0px;
     top: 0px;
@@ -108,6 +108,7 @@ p{
 }
 
 /* right container End*/
+
 #text_box{
     width: 100%;
     height: 100px;

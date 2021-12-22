@@ -28,7 +28,7 @@ html {
     margin-top: 80px;
     
 }
-body{
+.AboutPage{
   background: url(/assets/img/bk.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
