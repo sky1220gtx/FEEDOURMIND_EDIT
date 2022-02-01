@@ -3,10 +3,15 @@
 class DB_FOM{
     private static function DB(){
         $db = [];
-        $db['hostname'] = '31.220.110.51';
-        $db['dbname'] = 'u730565153_fom';
-        $db['username'] = 'u730565153_Feedourmind21';
-        $db['password'] = 'Feedourmind21';
+        $db['hostname'] = 'localhost';
+        $db['dbname'] = 'db_fom';
+        $db['username'] = 'master_user';
+        $db['password'] = 'master_user';
+
+        // $db['hostname'] = '31.220.110.51';
+        // $db['dbname'] = 'u730565153_fom';
+        // $db['username'] = 'u730565153_Feedourmind21';
+        // $db['password'] = 'Feedourmind21';
         return $db;
     }
 

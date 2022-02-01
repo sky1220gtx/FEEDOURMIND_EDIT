@@ -146,7 +146,7 @@ $workid = explode('/', $workid);
                 ?>
                     <div class="view_box" style="display: flow-root;">
                     <div class="w3-third">
-                        <img src="<?= rPath ?>public/assets/img/pic5.jpg" class="image1" alt="pic" width="80%" height="130%"> 
+                        <img src="<?= rPath ?>public/assets/img/thumbnails/<?=$allArticle[$i]['articleID']?>.jpeg" class="image1" alt="pic" width="80%" height="130%"> 
                     </div>
                     <div class="w3-thirdquarter">
                         
