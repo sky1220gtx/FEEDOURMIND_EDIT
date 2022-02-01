@@ -75,7 +75,7 @@ $popularArticle = mHome::show_article_popular();
         for($i=0; $i<sizeof($recentArticle); $i++){
             ?>
             <div class="w3-quarter">
-                <img src="<?= rPath ?>public/assets/img/pic45.jpg" alt="Sandwich" style="width:100%">
+                <img src="<?= rPath ?>public/assets/img/thumbnails/<?=$recentArticle[$i]['articleID']?>.jpeg" alt="Sandwich" style="width:100%">
                 <h3><?= $recentArticle[$i]['title'] ?></h3>
                 <p><?= mb_strimwidth($recentArticle[$i]['content'], 0, 100, "...") // Limit echo 100 chars ?></p>
                 <p><a href="work/<?=$recentArticle[$i]['articleID']?>"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
@@ -105,7 +105,7 @@ $popularArticle = mHome::show_article_popular();
             ?>
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-card">
-                    <img src="<?= rPath ?>public/assets/img/pic5.jpg" alt="John" style="width:100%">
+                    <img src="<?= rPath ?>public/assets/img/thumbnails/<?=$popularArticle[$i]['articleID']?>.jpeg" alt="John" style="width:100%">
                     <div class="w3-container">
                         <h3><?= $popularArticle[$i]['title'] ?></h3>
                         <p class="w3-opacity">by: <?= $popularArticle[$i]['userID'] ?></p>
