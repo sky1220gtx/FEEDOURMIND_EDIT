@@ -1,0 +1,14 @@
+.container{
+    width: 100%;
+    margin:20px;
+    background-color: #e7e7ee;
+}
+/* .top{
+
+} */
+.profile-img{
+    padding: 20px;
+}
+.w3-third{
+    width: min-content;
+}
