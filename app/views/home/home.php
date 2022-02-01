@@ -56,7 +56,7 @@ $popularArticle = mHome::show_article_popular();
                 <?= mb_strimwidth($topArticle[0]['content'], 0, 300, "...") // Limit echo 300 chars ?>
                 
                 </p>
-                <p><a href="#"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
+                <p><a href="work/<?=$topArticle[0]['articleID']?>"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
             </div>
             <div class="w3-col m6">
                 <!-- <img class="w3-image w3-round-large" src="<?= rPath ?>public/assets/img/pic5.jpg" alt="Buildings" width="600" height="394"> -->
@@ -78,7 +78,7 @@ $popularArticle = mHome::show_article_popular();
                 <img src="<?= rPath ?>public/assets/img/pic45.jpg" alt="Sandwich" style="width:100%">
                 <h3><?= $recentArticle[$i]['title'] ?></h3>
                 <p><?= mb_strimwidth($recentArticle[$i]['content'], 0, 100, "...") // Limit echo 100 chars ?></p>
-                <p><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
+                <p><a href="work/<?=$recentArticle[$i]['articleID']?>"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
             </div>
         <?php
         }
@@ -110,7 +110,7 @@ $popularArticle = mHome::show_article_popular();
                         <h3><?= $popularArticle[$i]['title'] ?></h3>
                         <p class="w3-opacity">by: <?= $popularArticle[$i]['userID'] ?></p>
                         <p style="margin-top: 10px;"><?= mb_strimwidth($popularArticle[$i]['content'], 0, 100, "...") // Limit echo 100 chars ?></p>
-                        <p style="margin-top: 8px;margin-bottom: 8px;"><a href="pagechange.html"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
+                        <p style="margin-top: 8px;margin-bottom: 8px;"><a href="work/<?=$popularArticle[0]['articleID']?>"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
                     </div>
                 </div>
             </div>
