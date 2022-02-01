@@ -10,30 +10,29 @@ $workid = filter_var($workid, FILTER_SANITIZE_URL);
 $workid = explode('/', $workid);
 ?>
     <?php
-    if(isset($workid[1])){
+    if (isset($workid[1])) {
         // Detailed Article START
         // call function
-        $detailedArticle = mWork::show_detailed_article($workid[1]);
-        ?>
+        $detailedArticle = mWork::show_detailed_article($workid[1]); ?>
             <!--Page change Start-->
     <div class="container">
 	   <!--left_container start-->
        <div class="left_container">
            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
            <div class="title">
-               <h1 style="color: black"><?=$detailedArticle[0]['title'];?></h1><br>
-                <p><?=$detailedArticle[0]['Created'];?></p><br>
+               <h1 style="color: black"><?=$detailedArticle[0]['title']; ?></h1><br>
+                <p><?=$detailedArticle[0]['Created']; ?></p><br>
             </div>
 
             <!--Video Upload Start-->
             <div class="wrapper">
                 <div class="videowrapper">
-                <?=$detailedArticle[0]['VideoLink'];?>
+                <?=$detailedArticle[0]['VideoLink']; ?>
                 </div>
             </div>
             <!--Video Upload End-->
             <div class="text_body">
-            <?=$detailedArticle[0]['content'];?>
+            <?=$detailedArticle[0]['content']; ?>
 
 
         <hr>
@@ -135,14 +134,13 @@ $workid = explode('/', $workid);
     } else {
         // AllArticle START
         // call function
-        $allArticle = mWork::show_all_article();
-        ?>
+        $allArticle = mWork::show_all_article(); ?>
         <div class="container">
 <div style="margin-top: 11rem">
         <h1>ARTICLES</h1>
         <hr><br>
         <?php
-            for($i=0; $i<sizeof($allArticle); $i++){
+            for ($i=0; $i<sizeof($allArticle); $i++) {
                 ?>
                     <div class="view_box" style="display: flow-root;">
                     <div class="w3-third">
@@ -155,14 +153,13 @@ $workid = explode('/', $workid);
                         </p>
                         <p class="by-name"><a href="#">By <?=$allArticle[$i]['userID']?> </a>/ <?=$allArticle[$i]['Created']?></p>
                         <h5>
-                        <?= mb_strimwidth($allArticle[$i]['content'], 0, 300, "...") // Limit echo 300 chars ?>
+                        <?= mb_strimwidth($allArticle[$i]['content'], 0, 300, "...") // Limit echo 300 chars?>
                         </h5>
                         <p class="read-button"><a href="work/<?=$allArticle[$i]['articleID']?>"><button class="w3-button w3-light-grey w3-block" style="width: 250px; float: right;"><i class="fa fa-arrow-circle-right"></i> Read more</button></a></p>
                     </div>
                 </div>
                 <?php
-            }
-        ?>
+            } ?>
         </div>
         </div>
         <?php
