@@ -6,22 +6,22 @@ include vPath.'templates/header.php';
 <?php
 
 if( isset($_SESSION['fom_user_name']) ){
-  header('Location: '.rPath.'profile');
+  //header('Location: '.rPath.'profile');
 }
 
 if ( isset($_POST['username']) ){
   ?><br><br><br><br><br><br><br><br><br><br><?php
   $chk=mSignup::check_login();
 
-  if(isset($chk)){
-    //check if user is exist
-    $_SESSION['fom_user_name'] = $chk[0]['userID'];
-    $_SESSION['fom_user_password'] = $chk[0]['password'];
-    header('Location: '.rPath.'login');
-  } else {
+  if($chk[0]==NULL){
+    //check if user is doesnt exist
     $dataUser=mSignup::insert();
     $_SESSION['fom_user_name'] = $dataUser[0]['userID'];
     $_SESSION['fom_user_password'] = $dataUser[0]['password'];
+    header('Location: '.rPath.'login');
+  } else {
+    $_SESSION['fom_user_name'] = $chk[0]['userID'];
+    $_SESSION['fom_user_password'] = $chk[0]['password'];
     header('Location: '.rPath.'login');
   }
   
