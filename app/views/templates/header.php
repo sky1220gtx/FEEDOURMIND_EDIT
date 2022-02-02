@@ -22,7 +22,7 @@
     <div class="w3-top">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
                 
-                <a href="<?= rPath ?>" class="w3-bar-item w3-button w3-wide"> <img src="<?= rPath ?>public/assets/logo/Logo.png" alt="">FeedOurMind</a>
+        <a href="<?= rPath ?>" class="w3-bar-item w3-button w3-wide"> <img style="width: 10%;" src="<?= rPath ?>public/assets/logo/Logo.png" alt="">FeedOurMind</a>
             
             <!-- Right-sided navbar links -->
             
