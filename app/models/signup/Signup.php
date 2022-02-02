@@ -16,12 +16,12 @@ class mSignup{
         
         $e=filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         
-        // echo $u;
-        // echo "<br>";
-        // echo $p;
-        // echo "<br>";
-        // echo $e;
-        // echo "<br>";
+        echo $u;
+        echo "<br>";
+        echo $p;
+        echo "<br>";
+        echo $e;
+        echo "<br>";
         $q = 'INSERT INTO `fom_tblusers` (`userID`, `password`, `Email`, `Created`, `Updated`) VALUES ("'.$u.'", "'.$p.'", "'.$e.'", current_timestamp(), current_timestamp()); ';
         DB_FOM::FOM_INSERT($q);
         $q = 'SELECT * FROM `fom_tblusers` WHERE userID="'.$u.'" AND password="'.$p.'"';
